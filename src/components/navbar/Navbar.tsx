@@ -7,11 +7,11 @@ import Link from "next/link";
 
 function Navbar() {
   return (
-    <div className={cn("grid grid-cols-3 p-3")}>
-      <div className={cn("col-span-1 flex content-center justify-start")}>
-        <div>
-          <Link href={'/'}><Image src={logo} alt="logo" className={cn("w-25 h-25")}/></Link>
-        </div>
+    <div className={cn("grid grid-cols-4 p-3")}>
+      <div className={cn("col-span-2 flex content-center justify-start")}>
+        <Link href={"/"}>
+          <Image src={logo} alt="logo" className={cn("w-25 h-25")} />
+        </Link>
       </div>
       <div className={cn("col-span-2 content-center justify-around")}>
         <MenuItems />
