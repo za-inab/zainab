@@ -13,35 +13,34 @@ import {
 function Contact() {
   return (
     <div className={cn("justify-center items-center")}>
-      <div>
-        You feel like I can solve your problems or simply you have a query then
-        <h1>Let's Work Together</h1>
-        <h5>zainabasif.work@gmail.com</h5>
+      <div className="flex flex-col m-15">
+        <p className="pt-2 pb-2">
+          You feel like I can solve your problems or simply you have a query
+          then
+        </p>
+        <h1 className="pt-2 pb-2">Let's Work Together</h1>
+        <h5 className="pt-2 pb-2">zainabasif.work@gmail.com</h5>
         <form>
-          <label>Full name</label>
-          <input></input>
-          <label>Your Email Address</label>
-          <input></input>
-          <label>Phone Number</label>
-          <input></input>
+          <div className="pt-2 pb-2 flex flex-col">
+            <label>Full name</label>
+            <input className="border-b-2 border-y-white selection:border-b-green-400"></input>
+          </div>
+          <div className="pt-2 pb-2 flex flex-col">
+            <label>Your Email Address</label>
+            <input className="border-b-2 border-y-white"></input>
+          </div>
+          <div className="pt-2 pb-2 flex flex-col">
+            <label>Phone Number</label>
+            <input className="border-b-2 border-y-white"></input>
+          </div>
           <label>Subject</label>
-          <Select>
-            <SelectTrigger className="w-[180px]">
-              <SelectValue placeholder="Select a fruit" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectGroup>
-                <SelectLabel>Fruits</SelectLabel>
-                <SelectItem value="apple">Apple</SelectItem>
-                <SelectItem value="banana">Banana</SelectItem>
-                <SelectItem value="blueberry">Blueberry</SelectItem>
-                <SelectItem value="grapes">Grapes</SelectItem>
-                <SelectItem value="pineapple">Pineapple</SelectItem>
-              </SelectGroup>
-            </SelectContent>
-          </Select>
-          <label>Message</label>
-          <textarea />
+          <div className="pt-2 pb-2 flex flex-col">
+            <input className="border-b-2 border-y-white"></input>
+          </div>
+          <div className="pt-2 pb-2 flex flex-col">
+            <label>Message</label>
+            <textarea className="border-2 border-cyan-100" />
+          </div>
         </form>
       </div>
     </div>
