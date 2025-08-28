@@ -12,7 +12,9 @@ import {
 
 function Contact() {
   return (
-    <div className={cn("justify-center items-center")}>
+    <div
+      className={cn("flex justify-self-center justify-items-center max-w-8/12")}
+    >
       <div className="flex flex-col m-15">
         <p className="pt-2 pb-2">
           You feel like I can solve your problems or simply you have a query
