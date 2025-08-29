@@ -1,0 +1,40 @@
+{
+  "words": [
+    {
+      "text": "Hi",
+      "className": "text-lg text-neutral-300"
+    },
+    {
+      "text": "and",
+      "className": "text-lg text-neutral-300"
+    },
+    {
+      "text": "Welcome",
+      "className": "text-lg text-neutral-300"
+    },
+    {
+      "text": "I",
+      "className": "text-lg text-neutral-300"
+    },
+    {
+      "text": "am",
+      "className": "text-lg text-neutral-300"
+    },
+    {
+      "text": "a",
+      "className": "text-lg text-neutral-300"
+    },
+    {
+      "text": " Software Engineer",
+      "className": "text-2xl text-neutral-300 text-emerald-400"
+    },
+    {
+      "text": "and",
+      "className": "text-lg text-neutral-300"
+    },
+    {
+      "text": "Full Stack Developer",
+      "className": "text-2xl text-neutral-300 text-emerald-400"
+    }
+  ]
+}

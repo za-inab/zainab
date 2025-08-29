@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./../../../public/ZainabAsif_white.svg";
+import logo from "./../../../public/ZA_green_white.svg";
 import Image from "next/image";
 import MenuItems from "./MenuItems";
 import { cn } from "@/lib/utils";
@@ -10,7 +10,11 @@ function Navbar() {
     <div className={cn("fixed grid grid-cols-4 p-3 w-screen")}>
       <div className={cn("col-span-2 flex content-center justify-start")}>
         <Link href={"/"}>
-          <Image src={logo} alt="logo" className={cn("w-25 h-25")} />
+          <Image
+            src={logo}
+            alt="logo"
+            className={cn("w-25 h-25 -emerald-400")}
+          />
         </Link>
       </div>
       <div className={cn("col-span-2 content-center justify-around")}>
