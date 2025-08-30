@@ -30,7 +30,7 @@ function HeroSection() {
         <div className="flex text-neutral-300 justify-center items-center text-center">
           <TypewriterEffectSmooth
             className="flex flex-row text-center"
-            cursorClassName="bg-emerald-400 items-center"
+            cursorClassName="bg-emerald-400"
             words={words.words}
           />
         </div>

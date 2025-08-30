@@ -119,7 +119,7 @@ export const TypewriterEffectSmooth = ({
   });
   const renderWords = () => {
     return (
-      <div className="flex justify-center flex-wrap ">
+      <div className="">
         {wordsArray.map((word, idx) => {
           return (
             <div key={`word-${idx}`} className="inline-block">
