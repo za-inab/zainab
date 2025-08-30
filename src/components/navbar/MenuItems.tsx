@@ -10,9 +10,12 @@ function MenuItems({ direction = "row", onClick }: MenuItemsProps) {
   return (
     <div
       className={`flex ${
-        direction === "row" ? "flex-row space-x-6" : "flex-col space-y-4"
+        direction === "row" ? "flex-row space-x-6" : "flex-col space-y-8 p-4 "
       }`}
     >
+      <Link href="/" onClick={onClick} className="hover:text-emerald-500">
+        Home
+      </Link>
       <Link href="/about" onClick={onClick} className="hover:text-emerald-500">
         About
       </Link>

@@ -5,7 +5,7 @@ import Image from "next/image";
 import MenuItems from "./MenuItems";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { Menu, X } from "lucide-react"; // 👈 icons for hamburger
+import { Menu, X } from "@deemlol/next-icons"; // 👈 icons for hamburger
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,19 +34,42 @@ function Navbar() {
 
       {/* Mobile Hamburger Button */}
       <button
-        className="md:hidden p-2 rounded-md hover:bg-gray-100"
+        className="md:hidden p-2 rounded-md hover:bg-gray-700"
         onClick={() => setIsOpen(!isOpen)}
       >
         {isOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
 
-      {/* Mobile Dropdown Menu */}
-      {isOpen && (
-        <div className="absolute top-full left-0 w-full bg-white shadow-md md:hidden">
-          <div className="flex flex-col space-y-4 p-4">
-            <MenuItems />
-          </div>
+      {/* Mobile Sidebar */}
+      <div
+        className={cn(
+          "fixed top-0 right-0 h-screen w-64 bg-gray-800 shadow-lg transform transition-transform duration-300 ease-in-out z-50",
+          isOpen ? "translate-x-0" : "translate-x-full"
+        )}
+      >
+        {/* Sidebar Header */}
+        <div className="flex items-center justify-between px-4 py-3 border-b border-gray-700">
+          <span className="font-semibold text-lg">Menu</span>
+          <button
+            className="p-2 rounded-md hover:bg-gray-700"
+            onClick={() => setIsOpen(false)}
+          >
+            <X size={24} />
+          </button>
         </div>
+
+        {/* Sidebar Menu Items */}
+        <div>
+          <MenuItems onClick={() => setIsOpen(false)} direction={"col"} />
+        </div>
+      </div>
+
+      {/* Backdrop */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-40 z-40"
+          onClick={() => setIsOpen(false)}
+        />
       )}
     </nav>
   );
