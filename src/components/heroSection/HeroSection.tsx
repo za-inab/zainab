@@ -6,7 +6,6 @@ import { TypewriterEffectSmooth } from "../ui/typewriter-effect";
 import words from "@/data/introData.json";
 
 function HeroSection() {
-  console.log("words: ", words);
   return (
     <div className="h-full w-full flex flex-col items-center justify-center ">
       <SparklesCore
