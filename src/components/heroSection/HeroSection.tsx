@@ -38,7 +38,9 @@ function HeroSection() {
           <Link href={"/about"}>
             <Button
               borderRadius="1rem"
-              className="bg-black dark:bg-black text-white dark:text-white border-neutral-300 dark:border-slate-800"
+              className="
+            bg-transparent
+            text-white "
             >
               About Me
             </Button>
