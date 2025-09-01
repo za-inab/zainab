@@ -43,13 +43,13 @@ function Navbar() {
       {/* Mobile Sidebar */}
       <div
         className={cn(
-          "fixed top-0 right-0 h-screen w-64 bg-gray-800 shadow-lg transform transition-transform duration-300 ease-in-out z-50",
+          "fixed top-0 right-0 h-screen w-64 bg-gray-950 shadow-lg transform transition-transform duration-300 ease-in-out z-50",
           isOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
         {/* Sidebar Header */}
         <div className="flex items-center justify-between px-4 py-3 border-b border-gray-700">
-          <span className="font-semibold text-lg">Menu</span>
+          <span className="font-semibold text-lg text-emerald-500">Menu</span>
           <button
             className="p-2 rounded-md hover:bg-gray-700"
             onClick={() => setIsOpen(false)}
