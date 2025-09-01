@@ -10,12 +10,12 @@ function HeroSection() {
     <div className="h-full w-full flex flex-col items-center justify-center ">
       <SparklesCore
         id="tsparticlesfullpage"
-        background="transparent"
+        background="black"
         minSize={0.6}
         maxSize={1.4}
         particleDensity={100}
         className="w-full h-full"
-        particleColor="#FFFFFF"
+        particleColor="#05df72"
       />
       <div className="p-4 absolute z-10 w-full text-center mt-10">
         <div className="flex flex-row justify-center items-center">
