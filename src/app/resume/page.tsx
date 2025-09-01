@@ -162,43 +162,45 @@ const skillsData = [
 
 const ResumePage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-black relative">
-      {/* Background geometric patterns */}
-      <div className="fixed inset-0 pointer-events-none z-0">
-        <div className="absolute top-20 right-20 w-64 h-64 border border-gray-800/30 rounded-full hidden md:block" />
-        <div className="absolute bottom-20 right-40 w-48 h-48 border border-gray-800/20 rounded-full hidden md:block" />
-        <div className="absolute top-1/2 right-1/3 w-32 h-32 border border-gray-800/25 rounded-full hidden lg:block" />
-        <div className="absolute top-40 right-60 w-96 h-96 border border-gray-800/15 rounded-full hidden lg:block" />
+    <div className="flex flex-col justify-center items-center mt-20 bg-black text-white lg:px-20 mx-4">
+      <div className="min-h-screen bg-black relative">
+        {/* Background geometric patterns */}
+        <div className="fixed inset-0 pointer-events-none z-0">
+          <div className="absolute top-20 right-20 w-64 h-64 border border-gray-800/30 rounded-full hidden md:block" />
+          <div className="absolute bottom-20 right-40 w-48 h-48 border border-gray-800/20 rounded-full hidden md:block" />
+          <div className="absolute top-1/2 right-1/3 w-32 h-32 border border-gray-800/25 rounded-full hidden lg:block" />
+          <div className="absolute top-40 right-60 w-96 h-96 border border-gray-800/15 rounded-full hidden lg:block" />
 
-        {/* Additional geometric lines */}
-        <div className="absolute top-32 right-32 w-48 h-px bg-gradient-to-r from-transparent via-gray-800/30 to-transparent rotate-45 hidden md:block" />
-        <div className="absolute bottom-40 right-20 w-64 h-px bg-gradient-to-r from-transparent via-gray-800/30 to-transparent -rotate-45 hidden md:block" />
-      </div>
+          {/* Additional geometric lines */}
+          <div className="absolute top-32 right-32 w-48 h-px bg-gradient-to-r from-transparent via-gray-800/30 to-transparent rotate-45 hidden md:block" />
+          <div className="absolute bottom-40 right-20 w-64 h-px bg-gradient-to-r from-transparent via-gray-800/30 to-transparent -rotate-45 hidden md:block" />
+        </div>
 
-      {/* Main Container with proper spacing for navbar/footer */}
-      <div className="pt-20 pb-16 px-4 md:px-8 relative z-10">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 lg:gap-12 items-start justify-center min-h-[calc(100vh-144px)]">
-          {/* Profile Card - Side positioned on desktop, top on mobile */}
-          <div className="w-full lg:w-80 lg:sticky lg:top-24 flex-shrink-0">
-            <ProfileCard {...profileData} />
-          </div>
-
-          {/* Main Content - Scrollable timeline and skills */}
-          <div className="flex-1 max-w-4xl">
-            {/* Timeline Section */}
-            <div className="mb-20">
-              <div className="mb-8 lg:mb-12">
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-                  <span className="text-white">Education &</span>{" "}
-                  <span className="text-green-400">Experience</span>
-                </h1>
-              </div>
-              <Timeline items={timelineData} />
+        {/* Main Container with proper spacing for navbar/footer */}
+        <div className="pt-20 pb-16 px-4 md:px-8 relative z-10">
+          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 lg:gap-12 items-start justify-center min-h-[calc(100vh-144px)]">
+            {/* Profile Card - Side positioned on desktop, top on mobile */}
+            <div className="w-full lg:w-80 lg:sticky lg:top-24 flex-shrink-0">
+              <ProfileCard {...profileData} />
             </div>
 
-            {/* Skills Section */}
-            <div className="mb-20">
-              <Skills skills={skillsData} />
+            {/* Main Content - Scrollable timeline and skills */}
+            <div className="flex-1 max-w-4xl">
+              {/* Timeline Section */}
+              <div className="mb-20">
+                <div className="mb-8 lg:mb-12">
+                  <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+                    <span className="text-white">Education &</span>{" "}
+                    <span className="text-green-400">Experience</span>
+                  </h1>
+                </div>
+                <Timeline items={timelineData} />
+              </div>
+
+              {/* Skills Section */}
+              <div className="mb-20">
+                <Skills skills={skillsData} />
+              </div>
             </div>
           </div>
         </div>

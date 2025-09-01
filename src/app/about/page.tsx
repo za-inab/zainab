@@ -13,7 +13,8 @@ function AboutPage() {
   //   </div>
   // </div>
   return (
-    <section className="bg-black text-white py-16 px-6 lg:px-20 flex flex-col items-center">
+    <div className="flex flex-col justify-center items-center mt-20 bg-black text-white lg:px-20 mx-4">
+      {/* <section className="bg-black text-white py-16 px-6 lg:px-20 flex flex-col items-center"> */}
       {/* Heading */}
       <div className="text-center mb-12">
         <p className="text-gray-400 mb-2">Get to know me</p>
@@ -107,7 +108,7 @@ function AboutPage() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 
