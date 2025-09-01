@@ -1,10 +1,11 @@
 'use client'
-import React, { useState } from 'react';
+import Image from "next/image";
+import React, { useState } from "react";
 
 interface Skill {
   id: string;
   name: string;
-  icon: string; // URL or emoji or base64
+  icon: string;
   category?: string;
   color?: string;
 }
@@ -15,7 +16,7 @@ interface SkillsProps {
   className?: string;
 }
 
-const SkillCard: React.FC<{ skill: Skill }> = ({ skill }) => {
+function SkillCard({ skill }: { skill: Skill }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -25,11 +26,17 @@ const SkillCard: React.FC<{ skill: Skill }> = ({ skill }) => {
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Icon */}
-      <div className={`transition-all duration-300 ${isHovered ? 'opacity-0 scale-75' : 'opacity-100 scale-100'}`}>
-        {skill.icon.startsWith('http') || skill.icon.startsWith('data:') ? (
-          <img 
-            src={skill.icon} 
+      <div
+        className={`transition-all duration-300 ${
+          isHovered ? "opacity-0 scale-75" : "opacity-100 scale-100"
+        }`}
+      >
+        {skill.icon.startsWith("http") || skill.icon.startsWith("data:") ? (
+          <Image
+            src={skill.icon}
             alt={skill.name}
+            width={50}
+            height={50}
             className="w-10 h-10 object-contain"
           />
         ) : (
@@ -38,7 +45,11 @@ const SkillCard: React.FC<{ skill: Skill }> = ({ skill }) => {
       </div>
 
       {/* Skill Name on Hover */}
-      <div className={`absolute inset-0 flex items-center justify-center p-2 transition-all duration-300 ${isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-125'}`}>
+      <div
+        className={`absolute inset-0 flex items-center justify-center p-2 transition-all duration-300 ${
+          isHovered ? "opacity-100 scale-100" : "opacity-0 scale-125"
+        }`}
+      >
         <span className="text-white text-xs font-medium text-center leading-tight">
           {skill.name}
         </span>
