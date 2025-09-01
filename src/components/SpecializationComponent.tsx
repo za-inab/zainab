@@ -9,8 +9,10 @@ const SpecializationCard = ({ name, description, metric, icon, image }) => {
       {image && (
         <div className="mb-4 overflow-hidden rounded-lg">
           <Image
-            src={image} 
+            src={image}
             alt={name}
+            width={50}
+            height={50}
             className="w-full h-32 sm:h-40 object-cover group-hover:scale-105 transition-transform duration-300"
           />
         </div>
@@ -22,23 +24,25 @@ const SpecializationCard = ({ name, description, metric, icon, image }) => {
           {/* Icon */}
           {icon && (
             <div className="text-xl sm:text-2xl flex-shrink-0">
-              {typeof icon === 'string' ? icon : icon}
+              {typeof icon === "string" ? icon : icon}
             </div>
           )}
           <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-green-400 transition-colors truncate">
             {name}
           </h3>
         </div>
-        
+
         {/* Metric */}
         {metric && (
           <div className="text-right flex-shrink-0">
-            <div className="text-xl sm:text-2xl font-bold text-green-400">{metric}</div>
+            <div className="text-xl sm:text-2xl font-bold text-green-400">
+              {metric}
+            </div>
             <div className="text-xs sm:text-sm text-gray-500">Projects</div>
           </div>
         )}
       </div>
-      
+
       {/* Description */}
       <p className="text-gray-400 leading-relaxed text-sm sm:text-base mb-4">
         {description}
@@ -47,7 +51,7 @@ const SpecializationCard = ({ name, description, metric, icon, image }) => {
       {/* Progress indicator (only if metric exists) */}
       {metric && (
         <div className="w-full bg-gray-800 rounded-full h-1.5 sm:h-2">
-          <div 
+          <div
             className="bg-gradient-to-r from-green-400 to-green-500 h-1.5 sm:h-2 rounded-full transition-all duration-500 group-hover:from-green-300 group-hover:to-green-400"
             style={{ width: `${Math.min(parseInt(metric) / 1.5, 100)}%` }}
           />

@@ -1,6 +1,4 @@
-import React from 'react'
-
-
+"use client";
 import React from "react";
 import ProjectsComponent from "@/components/ProjectsComponent";
 import SpecializationComponent from "@/components/SpecializationComponent";
@@ -11,8 +9,7 @@ function Portfolio() {
     {
       name: "Align With Me",
       link: "https://alignwithme.example.com",
-      photo:
-        "https://images.unsplash.com/photo-1551434678-e076c223a692?w=500&h=300&fit=crop",
+      photo: "https://images.unsplash.com/photo-1551434678-e076c223a692",
       description:
         "AI platform for creating personalized user guides to enhance workplace collaboration.",
       technologies: [
@@ -27,8 +24,7 @@ function Portfolio() {
     {
       name: "Beyut",
       link: "https://beyut.example.com",
-      photo:
-        "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=500&h=300&fit=crop",
+      photo: "https://images.unsplash.com/photo-1560518883-ce09059eeffa",
       description:
         "Zillow for Saudi Arabia's real estate market with advanced search capabilities.",
       technologies: [
@@ -43,8 +39,7 @@ function Portfolio() {
     {
       name: "HoopWorld",
       link: "https://hoopworld.example.com",
-      photo:
-        "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=500&h=300&fit=crop",
+      photo: "https://images.unsplash.com/photo-1546519638-68e109498ffc",
       description:
         "AI platform for personalized basketball assessments and player development.",
       technologies: [
@@ -59,8 +54,7 @@ function Portfolio() {
     {
       name: "Dubizzle Clone",
       link: "https://dubizzle.example.com",
-      photo:
-        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop",
+      photo: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d",
       description:
         "Craigslist for the Middle East with advanced filtering and location services.",
       technologies: [
@@ -75,8 +69,7 @@ function Portfolio() {
     {
       name: "CarSpector",
       link: "https://carspector.example.com",
-      photo:
-        "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=500&h=300&fit=crop",
+      photo: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7",
       description:
         "Car inspection service platform for buying used cars with confidence.",
       technologies: [
@@ -91,8 +84,7 @@ function Portfolio() {
     {
       name: "OLX Pakistan",
       link: "https://olx.example.com",
-      photo:
-        "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=500&h=300&fit=crop",
+      photo: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da",
       description:
         "Marketplace platform for Pakistan with advanced search and user management.",
       technologies: [
@@ -153,6 +145,7 @@ function Portfolio() {
       description: "Expert in React, Next.js, Node.js, and cloud technologies",
     },
   ];
+
   return (
     <div className="flex h-full w-full justify-center items-center">
       <div className="min-h-screen bg-black text-white">
@@ -259,8 +252,8 @@ function Portfolio() {
               </div>
 
               {/* Scrollable Content */}
-              <div className="lg:col-span-3">
-                <div className="h-[800px] overflow-y-auto pr-4 space-y-16 custom-scrollbar">
+              <div className="lg:col-span-3 order-1 lg:order-2">
+                <div className="h-[500px] sm:h-[600px] lg:h-[800px] overflow-y-auto pr-2 sm:pr-4 space-y-8 sm:space-y-12 lg:space-y-16 custom-scrollbar">
                   {/* Projects Section */}
                   <ProjectsComponent projects={projects} />
 
