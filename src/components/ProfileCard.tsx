@@ -2,6 +2,7 @@ import React from 'react';
 import { Twitter, Globe, Instagram, MapPin } from 'lucide-react';
 import myPicture from "@/assests/Grad_Pic.jpg";
 import Image from "next/image";
+import { GlowingEffect } from "./ui/glowing-effect";
 
 interface SocialLink {
   id: string;
@@ -55,6 +56,14 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
 
   return (
     <div className="w-full bg-gray-900/80 backdrop-blur-sm rounded-3xl p-6 lg:p-8 border border-gray-800">
+      <GlowingEffect
+        spread={40}
+        glow={true}
+        disabled={false}
+        proximity={64}
+        inactiveZone={0.01}
+      />
+
       {/* Header */}
       <div className="mb-6 lg:mb-8">
         <h1 className="text-xl lg:text-2xl font-bold text-white mb-1">
