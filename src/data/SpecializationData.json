@@ -1,0 +1,14 @@
+{
+  "Spec": [
+    {
+      "title": "Full-Stack Development",
+      "description": "Building scalable and maintainable web applications with modern technologies.",
+      "metrics": ["20+ Projects", "1000+ Hours"]
+    },
+    {
+      "title": "AI & Machine Learning",
+      "description": "Integrating AI-powered features to enhance business workflows.",
+      "metrics": ["5 AI Projects", "Research Experience"]
+    }
+  ]
+}

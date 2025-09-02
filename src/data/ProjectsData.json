@@ -1,0 +1,16 @@
+{
+  "Projects": [
+    {
+      "name": "Portfolio Website",
+      "description": "Personal portfolio built with Next.js and TailwindCSS.",
+      "liveLink": "https://yourportfolio.com",
+      "photo": "/images/project1.jpg"
+    },
+    {
+      "name": "E-commerce Store",
+      "description": "Full-stack e-commerce store with Stripe payments and Next.js backend.",
+      "liveLink": "https://ecommerce.com",
+      "photo": "/images/project2.jpg"
+    }
+  ]
+}

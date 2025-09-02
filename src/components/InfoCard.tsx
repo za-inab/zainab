@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { FaTwitter, FaDribbble, FaInstagram, FaGithub } from "react-icons/fa";
-import myPicture from "@/assests/Grad_Pic.jpg"
+import myPicture from "@/assets/Grad_Pic.jpg";
 
 function InfoCard() {
   return (
