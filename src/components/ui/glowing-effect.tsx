@@ -9,7 +9,7 @@ interface GlowingEffectProps {
   inactiveZone?: number;
   proximity?: number;
   spread?: number;
-  variant?: "default" | "white";
+  variant?: "default" | "white" | "green";
   glow?: boolean;
   className?: string;
   disabled?: boolean;

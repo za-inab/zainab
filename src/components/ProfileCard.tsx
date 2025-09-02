@@ -1,6 +1,6 @@
 import React from 'react';
 import { Twitter, Globe, Instagram, MapPin } from 'lucide-react';
-import myPicture from "@/assests/Grad_Pic.jpg";
+import myPicture from "@/assets/Grad_Pic.jpg";
 import Image from "next/image";
 import { GlowingEffect } from "./ui/glowing-effect";
 
@@ -82,6 +82,8 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
         <div className="w-full h-48 lg:h-64 rounded-2xl overflow-hidden">
           <Image
             src={myPicture}
+            width={256}
+            height={256}
             alt={`${name} profile`}
             className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-300"
           />

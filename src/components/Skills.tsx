@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Image from "next/image";
 import React, { useState } from "react";
 
@@ -59,12 +59,12 @@ function SkillCard({ skill }: { skill: Skill }) {
       <div className="absolute inset-0 rounded-xl bg-green-400/0 group-hover:bg-green-400/5 transition-all duration-300" />
     </div>
   );
-};
+}
 
-const Skills: React.FC<SkillsProps> = ({ 
-  skills, 
-  title = "Skills", 
-  className = "" 
+const Skills: React.FC<SkillsProps> = ({
+  skills,
+  title = "Skills",
+  className = "",
 }) => {
   return (
     <div className={`${className}`}>
@@ -76,7 +76,10 @@ const Skills: React.FC<SkillsProps> = ({
       </div>
 
       {/* Skills Grid */}
-      <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-8 gap-3 md:gap-4">
+      <div
+        className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5 gap-3 gap-x-1
+      "
+      >
         {skills.map((skill) => (
           <SkillCard key={skill.id} skill={skill} />
         ))}
