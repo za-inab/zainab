@@ -2,35 +2,9 @@ import React from "react";
 import ProfileCard from "@/components/ProfileCard";
 import Timeline from "@/components/Timeline";
 import Skills from "@/components/Skills";
-
+import profileData from "@/data/ProfileData.json";
 // Sample data - replace with your actual data
-const profileData = {
-  name: "Drake",
-  title: "Framer Designer",
-  subtitle: "& Developer",
-  profileImage: "/api/placeholder/300/400", // Replace with your image path
-  email: "hello@drake.design",
-  location: "Base in Los Angeles, CA",
-  copyright: "© 2022 Drake. All Rights Reserved",
-  socialLinks: [
-    {
-      id: "1",
-      platform: "twitter" as const,
-      url: "https://twitter.com/yourhandle",
-    },
-    { id: "2", platform: "website" as const, url: "https://yourwebsite.com" },
-    {
-      id: "3",
-      platform: "instagram" as const,
-      url: "https://instagram.com/yourhandle",
-    },
-    {
-      id: "4",
-      platform: "github" as const,
-      url: "https://github.com/yourhandle",
-    },
-  ],
-};
+
 
 const timelineData = [
   {

@@ -1,9 +1,11 @@
 import React from 'react';
 import { Twitter, Globe, Instagram, MapPin } from 'lucide-react';
+import myPicture from "@/assests/Grad_Pic.jpg";
+import Image from "next/image";
 
 interface SocialLink {
   id: string;
-  platform: 'twitter' | 'website' | 'instagram' | 'github';
+  platform: "twitter" | "website" | "instagram" | "github";
   url: string;
   icon?: React.ReactNode;
 }
@@ -29,19 +31,22 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
   location,
   copyright,
   hireMeText = "HIRE ME!",
-  socialLinks
+  socialLinks,
 }) => {
   const getSocialIcon = (platform: string) => {
-    const iconProps = { size: 20, className: "text-gray-400 group-hover:text-white transition-colors" };
-    
+    const iconProps = {
+      size: 20,
+      className: "text-gray-400 group-hover:text-white transition-colors",
+    };
+
     switch (platform) {
-      case 'twitter':
+      case "twitter":
         return <Twitter {...iconProps} />;
-      case 'website':
+      case "website":
         return <Globe {...iconProps} />;
-      case 'instagram':
+      case "instagram":
         return <Instagram {...iconProps} />;
-      case 'github':
+      case "github":
         return <Globe {...iconProps} />; // Using Globe as fallback
       default:
         return <Globe {...iconProps} />;
@@ -64,8 +69,8 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
       {/* Profile Image */}
       <div className="mb-6 lg:mb-8">
         <div className="w-full h-48 lg:h-64 rounded-2xl overflow-hidden">
-          <img 
-            src={profileImage} 
+          <Image
+            src={myPicture}
             alt={`${name} profile`}
             className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-300"
           />
@@ -74,7 +79,9 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
 
       {/* Contact Info */}
       <div className="mb-6 lg:mb-8 space-y-3">
-        <div className="text-white font-medium text-sm lg:text-base">{email}</div>
+        <div className="text-white font-medium text-sm lg:text-base">
+          {email}
+        </div>
         <div className="flex items-center text-gray-400 text-sm">
           <MapPin size={16} className="mr-2" />
           {location}
