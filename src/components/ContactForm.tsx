@@ -29,7 +29,7 @@ function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-full max-w-2xl text-white space-y-8"
+      className="w-full max-w-2xl w-[] text-white space-y-8"
     >
       {/* Heading */}
       <div>
