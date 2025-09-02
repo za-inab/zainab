@@ -76,7 +76,7 @@ const Skills: React.FC<SkillsProps> = ({
       </div>
 
       {/* Skills Grid */}
-      <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-8 gap-3 md:gap-4">
+      <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-8 gap-3 md:gap-4">
         {skills.map((skill) => (
           <SkillCard key={skill.id} skill={skill} />
         ))}

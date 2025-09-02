@@ -62,6 +62,8 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
         disabled={false}
         proximity={64}
         inactiveZone={0.01}
+        borderWidth={3}
+        variant={"green"}
       />
 
       {/* Header */}
@@ -118,8 +120,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
       </div>
 
       {/* Hire Me Button */}
-      <button className="w-full bg-green-400 hover:bg-green-500 text-black font-bold py-3 lg:py-4 rounded-2xl transition-all duration-300 flex items-center justify-center gap-2">
-        <span>📧</span>
+      <button className="w-full font-medium bg-emerald-500 text-white py-3 lg:py-4 rounded-2xl transition-all duration-300 flex items-center justify-center gap-2  hover:bg-black hover:border-2 hover:border-emerald-500 hover:text-emerald-500 text-center">
         {hireMeText}
       </button>
     </div>
