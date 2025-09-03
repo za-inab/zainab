@@ -29,7 +29,7 @@ function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-full max-w-2xl w-[] text-white space-y-8"
+      className="w-full max-w-2xl ] text-white space-y-8"
     >
       {/* Heading */}
       <div>
@@ -161,7 +161,7 @@ function ContactForm() {
       {/* Button */}
       <button
         type="submit"
-        className="bg-green-500 text-black px-8 py-3 rounded-full font-medium hover:bg-black hover:border hover:border-green-500 hover:text-green-500 transition"
+        className="bg-emerald-500 text-black px-8 py-3 rounded-full font-medium hover:bg-black hover:border hover:border-green-500 hover:text-green-500 transition"
       >
         SEND MESSAGE
       </button>

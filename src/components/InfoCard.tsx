@@ -36,7 +36,7 @@ function InfoCard() {
       </div>
 
       {/* Button */}
-      <button className="bg-green-500 text-black px-6 py-2 rounded-full font-medium hover:bg-black hover:border hover:border-green-500 hover:text-green-500 transition">
+      <button className="bg-emerald-500 text-black px-6 py-2 rounded-full font-medium hover:bg-black hover:border hover:border-green-500 hover:text-green-500 transition">
         HIRE ME!
       </button>
     </div>
