@@ -18,7 +18,7 @@
     {
       "id": "4",
       "name": "Tailwind CSS",
-      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
+      "icon": "/tailwindcss.svg"
     },
     {
       "id": "5",
@@ -108,7 +108,7 @@
     {
       "id": "22",
       "name": "UI & UX",
-      "icon": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/adobe.svg"
+      "icon": "/ui-ux.svg"
     },
     {
       "id": "23",

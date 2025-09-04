@@ -82,7 +82,7 @@ const ResumePage: React.FC = () => {
                 <div className="mb-8 lg:mb-12">
                   <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
                     <span className="text-white">Education &</span>{" "}
-                    <span className="text-green-400">Experience</span>
+                    <span className="text-emerald-400">Experience</span>
                   </h1>
                 </div>
                 <Timeline items={timelineData} />

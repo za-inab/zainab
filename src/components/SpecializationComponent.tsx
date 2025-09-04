@@ -23,7 +23,7 @@ const SpecializationCard: React.FC<{ specialization: Specialization }> = ({
           {specialization?.metrics.map((m, i) => (
             <span
               key={i}
-              className="text-sm font-medium text-green-400 bg-green-400/10 px-3 py-1 rounded-full"
+              className="text-sm font-medium text-emerald-400 bg-emerald-400/10 px-3 py-1 rounded-full"
             >
               {m}
             </span>
@@ -31,7 +31,7 @@ const SpecializationCard: React.FC<{ specialization: Specialization }> = ({
         </div>
       </div>
       {specialization.icon && (
-        <div className="text-green-400 text-3xl">{specialization.icon}</div>
+        <div className="text-emerald-400 text-3xl">{specialization.icon}</div>
       )}
     </div>
   );
@@ -42,7 +42,7 @@ const SpecializationComponent: React.FC<{ data: Specialization[] }> = ({
 }) => (
   <div className="space-y-6 mb-12">
     <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-      My <span className="text-green-400">Specializations</span>
+      My <span className="text-emerald-400">Specializations</span>
     </h2>
     {data.map((s, i) => (
       <SpecializationCard key={i} specialization={s} />
