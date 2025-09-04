@@ -31,19 +31,34 @@
       "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
     },
     {
+      "id": "15",
+      "name": "Python",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+    },
+    {
+      "id": "17",
+      "name": "TensorFlow",
+      "icon": ""
+    },
+    {
+      "id": "18",
+      "name": "PyTorch",
+      "icon": ""
+    },
+    {
+      "id": "19",
+      "name": "Numpy",
+      "icon": ""
+    },
+    {
       "id": "7",
       "name": "React",
       "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
     },
     {
       "id": "8",
-      "name": "Source Tree",
+      "name": "Next",
       "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sourcetree/sourcetree-original.svg"
-    },
-    {
-      "id": "9",
-      "name": "Notion",
-      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/notion/notion-original.svg"
     },
     {
       "id": "10",
@@ -65,20 +80,37 @@
       "name": "PostgreSQL",
       "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
     },
+
+    {
+      "id": "16",
+      "name": "Jira",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg"
+    },
+    {
+      "id": "9",
+      "name": "Notion",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/notion/notion-original.svg"
+    },
+
     {
       "id": "14",
       "name": "Git",
       "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
     },
     {
-      "id": "15",
-      "name": "Figma",
-      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+      "id": "20",
+      "name": "TeamPlayer",
+      "icon": ""
     },
     {
-      "id": "16",
-      "name": "Photoshop",
-      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg"
+      "id": "21",
+      "name": "Communication",
+      "icon": ""
+    },
+    {
+      "id": "22",
+      "name": "Leadership",
+      "icon": ""
     }
   ]
 }
