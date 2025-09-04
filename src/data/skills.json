@@ -118,12 +118,12 @@
     {
       "id": "24",
       "name": "Communication",
-      "icon": "/communication-.svg"
+      "icon": "/communication.svg"
     },
     {
       "id": "25",
       "name": "Leadership",
-      "icon": "/leader.svg"
+      "icon": "/leadership.svg"
     }
   ]
 }
