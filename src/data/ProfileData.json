@@ -3,25 +3,24 @@
   "title": "Software Engineer",
   "subtitle": "& Full Stack Developer",
   "profileImage": "src/assets/Grad_Pic.jpg",
-  "email": "hello@drake.design",
-  "location": "Base in Los Angeles, CA",
-  "copyright": "© 2022 Drake. All Rights Reserved",
+  "email": "zainabasif.work@gmail.com",
+  "location": "Lahore, Pakistan",
+  "copyright": "©2025 Zainab. All Rights Reserved",
   "socialLinks": [
     {
       "id": "1",
-      "platform": "twitter",
-      "url": "https://twitter.com/yourhandle"
+      "platform": "x",
+      "url": "https://x.com/xainab_asif"
     },
-    { "id": "2", "platform": "website", "url": "https://yourwebsite.com" },
+    {
+      "id": "2",
+      "platform": "Linkedin",
+      "url": "https://www.linkedin.com/in/zainab-asif-2206/"
+    },
     {
       "id": "3",
-      "platform": "instagram",
-      "url": "https://instagram.com/yourhandle"
-    },
-    {
-      "id": "4",
       "platform": "github",
-      "url": "https://github.com/yourhandle"
+      "url": "https://github.com/za-inab"
     }
   ]
 }
