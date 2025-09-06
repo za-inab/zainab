@@ -7,12 +7,11 @@ function AboutPage() {
   return (
     <div className="flex flex-col h-full w-full justify-center items-center">
       <div className="flex flex-col justify-center items-center bg-black text-white lg:px-20 mx-4">
-        {/* <section className="bg-black text-white py-16 px-6 lg:px-20 flex flex-col items-center"> */}
         {/* Heading */}
         <div className="text-center mb-12">
           <p className="text-gray-400 mb-2">Get to know me</p>
           <h2 className="text-4xl font-bold relative inline-block">
-            About Me
+            About <span className="text-emerald-400">Me</span>
             {/* Animated underline */}
             <span className="absolute left-0 bottom-[-8px] w-full h-[3px] bg-emerald-500 animate-pulse rounded-full"></span>
           </h2>
@@ -36,16 +35,56 @@ function AboutPage() {
           <div className="flex flex-col justify-center mx-2 lg:pl-6">
             <h3 className="text-emerald-500 text-lg mb-2">Who am I?</h3>
             <h1 className="text-2xl lg:text-3xl font-bold mb-4 leading-snug">
-              I&apos;m <span className="text-white">Zainab Asif</span>, a Visual
-              UX/UI Designer and Web Developer
+              I&apos;m <span className="text-white">Zainab Asif</span>, a
+              Software Engineer and Full Stack Developer
             </h1>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              I am a freelancer based in [Your Location] and I&apos;ve been
-              building noteworthy UX/UI designs and websites for years, which
-              comply with the latest design trends. I help convert a vision and
-              an idea into meaningful and useful products. Having a sharp eye
-              for product evolution helps me prioritize tasks, iterate fast and
-              deliver faster.
+              <section className="space-y-2">
+                <p className="leading-relaxed text-gray-300">
+                  I’m a{" "}
+                  <span className="text-emerald-400">Software Engineer</span>{" "}
+                  with
+                  <span className="text-emerald-400"> 2+ years</span> of
+                  professional experience (and{" "}
+                  <span className="text-emerald-400">4 years</span> of coding
+                  before that). I’ve built{" "}
+                  <span className="text-emerald-400">full-stack</span> apps,
+                  explored
+                  <span className="text-emerald-400">
+                    {" "}
+                    Machine Learning & AI
+                  </span>
+                  , and earned a reputation for writing code that’s simple,
+                  neat, and easy to understand. I love learning new things and
+                  pushing my curiosity. My main tools are
+                  <span className="text-emerald-400"> JavaScript</span>,{" "}
+                  <span className="text-emerald-400">Python</span>, and a steady
+                  flow of tea{" "}
+                  <span>(the real framework holding everything together)</span>.
+                </p>
+
+                <p className="leading-relaxed text-gray-300">
+                  I work comfortably in high stakes spaces like live environment
+                  issue handling,
+                  <span className="text-emerald-400"> payment processing</span>,
+                  and
+                  <span className="text-emerald-400">
+                    {" "}
+                    large scale CRMs
+                  </span>{" "}
+                  used by millions across MENA. My strengths include{" "}
+                  <span className="text-emerald-400">bug resolution</span>,
+                  <span className="text-emerald-400"> code optimization</span>,
+                  and
+                  <span className="text-emerald-400"> refactoring</span> complex
+                  code into simple, modular, clean systems that scale.{" "}
+                  <span className="text-emerald-400">
+                    I don&apos;t just write code, I deliver results you can
+                    count on.
+                  </span>
+                  .
+                </p>
+              </section>
             </p>
 
             {/* Info Grid */}
@@ -64,7 +103,7 @@ function AboutPage() {
                 </a>
               </p>
               <p>
-                <span className="font-semibold text-white">Age:</span> 21
+                <span className="font-semibold text-white">Age:</span> 23
               </p>
               <p>
                 <span className="font-semibold text-white">From:</span> Pakistan

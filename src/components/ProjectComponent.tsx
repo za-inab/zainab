@@ -29,7 +29,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
         <Link
           href={project.liveLink}
           target="_blank"
-          className="inline-block mt-3 text-green-400 text-sm font-medium hover:underline"
+          className="inline-block mt-3 text-emerald-400 text-sm font-medium hover:underline"
         >
           View Project →
         </Link>

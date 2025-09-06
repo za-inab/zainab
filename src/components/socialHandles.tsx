@@ -88,11 +88,11 @@ const SocialHandles: React.FC<SocialHandlesProps> = ({
   const getVariantClasses = () => {
     switch (variant) {
       case "minimal":
-        return "text-gray-400 hover:text-green-400";
+        return "text-gray-400 hover:text-emerald-400";
       case "filled":
-        return "bg-gray-800 text-gray-400 hover:bg-green-400 hover:text-black";
+        return "bg-gray-800 text-gray-400 hover:bg-emerald-400 hover:text-black";
       default:
-        return "border border-gray-700 text-gray-400 hover:border-green-400 hover:text-green-400";
+        return "border border-gray-700 text-gray-400 hover:border-emerald-400 hover:text-emerald-400";
     }
   };
 
@@ -120,7 +120,7 @@ const SocialHandles: React.FC<SocialHandlesProps> = ({
               ${variantClasses}
               rounded-full flex items-center justify-center 
               transition-all duration-300 hover:scale-110
-              focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-50
+              focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-opacity-50
             `}
             aria-label={handle.ariaLabel || `Visit ${handle.platform} profile`}
           >

@@ -29,14 +29,14 @@ function InfoCard() {
 
       {/* Social Links */}
       <div className="flex space-x-4">
-        <FaTwitter className="hover:text-green-500 cursor-pointer" />
-        <FaDribbble className="hover:text-green-500 cursor-pointer" />
-        <FaInstagram className="hover:text-green-500 cursor-pointer" />
-        <FaGithub className="hover:text-green-500 cursor-pointer" />
+        <FaTwitter className="hover:text-emerald-500 cursor-pointer" />
+        <FaDribbble className="hover:text-emerald-500 cursor-pointer" />
+        <FaInstagram className="hover:text-emerald-500 cursor-pointer" />
+        <FaGithub className="hover:text-emerald-500 cursor-pointer" />
       </div>
 
       {/* Button */}
-      <button className="bg-green-500 text-black px-6 py-2 rounded-full font-medium hover:bg-black hover:border hover:border-green-500 hover:text-green-500 transition">
+      <button className="bg-emerald-500 text-black px-6 py-2 rounded-full font-medium hover:bg-black hover:border hover:border-emerald-500 hover:text-emerald-500 transition">
         HIRE ME!
       </button>
     </div>
