@@ -38,54 +38,45 @@ function AboutPage() {
               I&apos;m <span className="text-white">Zainab Asif</span>, a
               Software Engineer and Full Stack Developer
             </h1>
-            <p className="text-gray-300 mb-6 leading-relaxed">
-              <section className="space-y-2">
-                <p className="leading-relaxed text-gray-300">
-                  I’m a{" "}
-                  <span className="text-emerald-400">Software Engineer</span>{" "}
-                  with
-                  <span className="text-emerald-400"> 2+ years</span> of
-                  professional experience (and{" "}
-                  <span className="text-emerald-400">4 years</span> of coding
-                  before that). I’ve built{" "}
-                  <span className="text-emerald-400">full-stack</span> apps,
-                  explored
-                  <span className="text-emerald-400">
-                    {" "}
-                    Machine Learning & AI
-                  </span>
-                  , and earned a reputation for writing code that’s simple,
-                  neat, and easy to understand. I love learning new things and
-                  pushing my curiosity. My main tools are
-                  <span className="text-emerald-400"> JavaScript</span>,{" "}
-                  <span className="text-emerald-400">Python</span>, and a steady
-                  flow of tea{" "}
-                  <span>(the real framework holding everything together)</span>.
-                </p>
+            <section className="space-y-2 text-gray-300 mb-6 leading-relaxed">
+              <p className="leading-relaxed text-gray-300">
+                I’m a{" "}
+                <span className="text-emerald-400">Software Engineer</span> with
+                <span className="text-emerald-400"> 2+ years</span> of
+                professional experience (and{" "}
+                <span className="text-emerald-400">4 years</span> of coding
+                before that). I’ve built{" "}
+                <span className="text-emerald-400">full-stack</span> apps,
+                explored
+                <span className="text-emerald-400"> Machine Learning & AI</span>
+                , and earned a reputation for writing code that’s simple, neat,
+                and easy to understand. I love learning new things and pushing
+                my curiosity. My main tools are
+                <span className="text-emerald-400"> JavaScript</span>,{" "}
+                <span className="text-emerald-400">Python</span>, and a steady
+                flow of tea{" "}
+                <span>(the real framework holding everything together)</span>.
+              </p>
 
-                <p className="leading-relaxed text-gray-300">
-                  I work comfortably in high stakes spaces like live environment
-                  issue handling,
-                  <span className="text-emerald-400"> payment processing</span>,
-                  and
-                  <span className="text-emerald-400">
-                    {" "}
-                    large scale CRMs
-                  </span>{" "}
-                  used by millions across MENA. My strengths include{" "}
-                  <span className="text-emerald-400">bug resolution</span>,
-                  <span className="text-emerald-400"> code optimization</span>,
-                  and
-                  <span className="text-emerald-400"> refactoring</span> complex
-                  code into simple, modular, clean systems that scale.{" "}
-                  <span className="text-emerald-400">
-                    I don&apos;t just write code, I deliver results you can
-                    count on.
-                  </span>
-                  .
-                </p>
-              </section>
-            </p>
+              <p className="leading-relaxed text-gray-300">
+                I work comfortably in high stakes spaces like live environment
+                issue handling,
+                <span className="text-emerald-400"> payment processing</span>,
+                and
+                <span className="text-emerald-400"> large scale CRMs</span> used
+                by millions across MENA. My strengths include{" "}
+                <span className="text-emerald-400">bug resolution</span>,
+                <span className="text-emerald-400"> code optimization</span>,
+                and
+                <span className="text-emerald-400"> refactoring</span> complex
+                code into simple, modular, clean systems that scale.{" "}
+                <span className="text-emerald-400">
+                  I don&apos;t just write code, I deliver results you can count
+                  on.
+                </span>
+                .
+              </p>
+            </section>
 
             {/* Info Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 text-gray-300 mb-8">
