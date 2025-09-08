@@ -1,14 +1,28 @@
 {
   "Spec": [
     {
-      "title": "Full-Stack Development",
-      "description": "Building scalable and maintainable web applications with modern technologies.",
-      "metrics": ["20+ Projects", "1000+ Hours"]
+      "title": "Full Stack Development",
+      "description": "Developed and maintained scalable web applications using modern technologies.",
+      "metrics": ["5+ Projects", "1000+ Hours"],
+      "icons": [
+        { "name": "CodeBracketIcon", "color": "emerald-500" },
+        { "name": "ClockIcon", "color": "emerald-500" }
+      ]
     },
     {
       "title": "AI & Machine Learning",
-      "description": "Integrating AI-powered features to enhance business workflows.",
-      "metrics": ["5 AI Projects", "Research Experience"]
+      "description": "Integrated end-to-end AI-powered features to enhance business workflows.",
+      "metrics": ["4+ Integration Projects"],
+      "icons": [{ "name": "CpuChipIcon", "color": "emerald-500" }]
+    },
+    {
+      "title": "Debugging and Refactoring",
+      "description": "Optimized legacy code and resolved critical issues to improve performance and maintainability.",
+      "metrics": ["100+ Issues Resolved", "10k+ Lines Refactored"],
+      "icons": [
+        { "name": "BugAntIcon", "color": "emerald-500" },
+        { "name": "WrenchScrewdriverIcon", "color": "emerald-500" }
+      ]
     }
   ]
 }
