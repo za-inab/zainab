@@ -14,6 +14,7 @@ const montserrat = Montserrat({
 const poppins = Poppins({
   variable: "--font-poppins",
   weight: ["400", "500", "700"],
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
