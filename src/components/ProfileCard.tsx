@@ -1,8 +1,9 @@
 import React from 'react';
-import { Twitter, Globe, Instagram, MapPin } from 'lucide-react';
+import { Globe, MapPin } from "lucide-react";
 import myPicture from "@/assets/Grad_Pic.jpg";
 import Image from "next/image";
 import { GlowingEffect } from "./ui/glowing-effect";
+import { Twitter, Github, Linkedin } from "@deemlol/next-icons";
 
 interface SocialLink {
   id: string;
@@ -22,6 +23,16 @@ interface ProfileCardProps {
   hireMeText?: string;
   socialLinks: SocialLink[];
 }
+
+const getIcons = (name: string) => {
+  const icons = {
+    twitter: <Twitter size={22} color="#FFFFFF" />,
+    github: <Github size={22} color="#FFFFFF" />,
+    linkedin: <Linkedin size={22} color="#FFFFFF" />,
+  };
+
+  return icons[name];
+};
 
 const ProfileCard: React.FC<ProfileCardProps> = ({
   name,
@@ -55,7 +66,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
   };
 
   return (
-    <div className="max-w-[350px] max-h-[600px] bg-gray-900/80 backdrop-blur-sm rounded-3xl p-[30px] lg:p-8 border border-gray-800">
+    <div className="max-w-[350px] max-h-[620px] bg-gray-900/80 backdrop-blur-sm rounded-3xl p-[30px] lg:p-8 border border-gray-800">
       <GlowingEffect
         spread={40}
         glow={true}
@@ -67,20 +78,22 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
       />
 
       {/* Header */}
-      <div className="mb-6 lg:mb-8">
-        <div className="flex flex-row justify-between items-center">
+      <div className="mb-3">
+        <div className="justify-between items-center">
           <h1 className="text-xl lg:text-2xl font-bold text-white mb-1">
             {name}
           </h1>
-          <div className="text-[13px] text-gray-400">
-            <div>{title}</div>
-            <div>{subtitle}</div>
+          <div className="text-[11.5px] text-gray-400">
+            <div>
+              {title} {subtitle}
+            </div>
+            <div></div>
           </div>
         </div>
       </div>
 
       {/* Profile Image */}
-      <div className="mb-6 lg:mb-8 justify-items-center items-center">
+      <div className="mb-4 justify-items-center items-center">
         <div className="max-w-[250px] aspect-square rounded-2xl overflow-hidden ">
           <Image
             src={myPicture}
@@ -93,8 +106,8 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
       </div>
 
       {/* Contact Info */}
-      <div className="mb-6 lg:mb-8 space-y-3">
-        <div className="text-white font-medium text-sm lg:text-base text-center">
+      <div className="mb-6 space-y-3">
+        <div className="text-white font-medium text-sm lg:text-base">
           {email}
         </div>
         <div className="flex items-center text-gray-400 text-sm">
@@ -103,13 +116,8 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
         </div>
       </div>
 
-      {/* Copyright */}
-      <div className="mb-6 lg:mb-8">
-        <p className="text-xs text-gray-500">{copyright}</p>
-      </div>
-
       {/* Social Links */}
-      <div className="flex gap-3 mb-6 lg:mb-8">
+      <div className="flex gap-3 mb-6">
         {socialLinks.map((link) => (
           <a
             key={link.id}
@@ -118,7 +126,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
             target="_blank"
             rel="noopener noreferrer"
           >
-            {link.icon || getSocialIcon(link.platform)}
+            {getIcons(link.icon)}
           </a>
         ))}
       </div>

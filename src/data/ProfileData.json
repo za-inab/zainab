@@ -10,17 +10,20 @@
     {
       "id": "1",
       "platform": "x",
-      "url": "https://x.com/xainab_asif"
+      "url": "https://x.com/xainab_asif",
+      "icon": "twitter"
     },
     {
       "id": "2",
       "platform": "Linkedin",
-      "url": "https://www.linkedin.com/in/zainab-asif-2206/"
+      "url": "https://www.linkedin.com/in/zainab-asif-2206/",
+      "icon": "linkedin"
     },
     {
       "id": "3",
       "platform": "github",
-      "url": "https://github.com/za-inab"
+      "url": "https://github.com/za-inab",
+      "icon": "github"
     }
   ]
 }
