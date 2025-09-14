@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
 import myPicture from "@/assets/Grad_Pic.jpg";
-import SocialHandles from "@/components/socialHandles";
 
 function AboutPage() {
   return (
@@ -104,8 +103,8 @@ function AboutPage() {
             {/* Buttons & Socials */}
             <div className="flex flex-col sm:flex-row sm:items-center gap-6">
               <a
-                href="/cv.pdf" // put your CV file
-                download
+                href="./Zainab-Asif_Resume_SoftwareEngineer_React_JS.pdf" // put your CV file
+                download="Zainab_Asif_CV_JS_Full_Stack_SE.pdf"
                 className="px-6 py-3 bg-emerald-500 text-white rounded-full font-medium hover:bg-black hover:border-2 hover:border-emerald-500 hover:text-emerald-500 transition text-center"
               >
                 Download CV

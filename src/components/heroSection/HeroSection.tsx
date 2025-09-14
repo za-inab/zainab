@@ -20,10 +20,10 @@ function HeroSection() {
       <div className="p-4 absolute z-10 w-full text-center mt-10">
         <div className="flex flex-row justify-center items-center">
           <h1 className="mt-20 md:mt-0 text-7xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-400 ">
-            Zainab
-          </h1>
-          <h1 className="mt-20 md:mt-0 text-7xl md:text-7xl font-bold text-emerald-500">
-            Asif
+            Zainab{" "}
+            <span className="mt-20 md:mt-0 text-7xl md:text-7xl font-bold text-emerald-500">
+              Asif
+            </span>
           </h1>
         </div>
         <div className="flex text-neutral-300 justify-center items-center text-center">
@@ -40,7 +40,7 @@ function HeroSection() {
               borderRadius="1rem"
               className="
             bg-transparent
-            text-white "
+            text-white border-1 border-emerald-950"
             >
               About Me
             </Button>

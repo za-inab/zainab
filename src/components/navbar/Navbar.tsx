@@ -13,7 +13,7 @@ function Navbar() {
   return (
     <nav
       className={cn(
-        "fixed top-0 left-0 w-full bg-transparent shadow-md z-50",
+        "fixed top-0 left-0 w-full bg-transparent shadow-md h-20 z-10",
         "flex items-center justify-between px-6 py-3"
       )}
     >
