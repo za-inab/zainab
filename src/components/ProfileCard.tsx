@@ -66,7 +66,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
   };
 
   return (
-    <div className="max-w-[350px] max-h-[620px] bg-gray-900/80 backdrop-blur-sm rounded-3xl p-[30px] lg:p-8 border border-gray-800">
+    <div className="max-w-[350px] max-h-[620px] bg-gray-900/80 backdrop-blur-sm rounded-3xl p-[30px] lg:p-8 border border-gray-800 justify-center items-center text-center">
       <GlowingEffect
         spread={40}
         glow={true}
@@ -110,14 +110,14 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
         <div className="text-white font-medium text-sm lg:text-base">
           {email}
         </div>
-        <div className="flex items-center text-gray-400 text-sm">
+        <div className="flex items-center text-gray-400 text-sm justify-center">
           <MapPin size={16} className="mr-2" />
           {location}
         </div>
       </div>
 
       {/* Social Links */}
-      <div className="flex gap-3 mb-6">
+      <div className="flex gap-3 mb-6 items-center justify-center">
         {socialLinks.map((link) => (
           <a
             key={link.id}
