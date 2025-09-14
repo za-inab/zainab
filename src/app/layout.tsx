@@ -3,6 +3,7 @@ import { Montserrat, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
 import { cn } from "@/lib/utils";
+import Footer from "@/components/Footer";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -59,14 +60,12 @@ export default function RootLayout({
           `${poppins.variable} ${montserrat.variable} antialiased h-svh flex flex-col`
         )}
       >
-        {/* Navbar (fixed at top) */}
         <Navbar />
-
         {/* Main content (scrollable + takes remaining height) */}
-        <main className="flex-1 overflow-y-auto bg-black">{children}</main>
-
-        {/* Footer (fixed at bottom) */}
-        {/* <Footer /> */}
+        <main className="flex-1 bg-black mt-24 overflow-y-visible">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );
