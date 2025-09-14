@@ -4,7 +4,7 @@ import myPicture from "@/assets/Grad_Pic.jpg";
 
 function AboutPage() {
   return (
-    <div className="flex flex-col h-full w-full justify-center items-center scrollbar-hide">
+    <div className="flex flex-col h-full w-full justify-center items-center">
       <div className="flex flex-col justify-center items-center bg-black text-white lg:px-20 mx-4">
         {/* Heading */}
         <div className="text-center mb-12">
