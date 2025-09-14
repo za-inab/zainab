@@ -54,7 +54,7 @@ const timelineData = [
 const ResumePage: React.FC = () => {
   return (
     <div className="flex flex-col h-full w-full justify-center items-center">
-      <div className="min-h-screen bg-black relative mt-20">
+      <div className="min-h-screen bg-black relative">
         {/* Background geometric patterns */}
         <div className="fixed inset-0 pointer-events-none z-0">
           <div className="absolute top-20 right-20 w-64 h-64 border border-gray-800/30 rounded-full hidden md:block" />

@@ -55,7 +55,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
   };
 
   return (
-    <div className="w-full bg-gray-900/80 backdrop-blur-sm rounded-3xl p-6 lg:p-8 border border-gray-800">
+    <div className="max-w-[350px] max-h-[600px] bg-gray-900/80 backdrop-blur-sm rounded-3xl p-[30px] lg:p-8 border border-gray-800">
       <GlowingEffect
         spread={40}
         glow={true}
@@ -68,18 +68,20 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
 
       {/* Header */}
       <div className="mb-6 lg:mb-8">
-        <h1 className="text-xl lg:text-2xl font-bold text-white mb-1">
-          {name} <span className="text-xs text-gray-500">®</span>
-        </h1>
-        <div className="text-sm text-gray-400">
-          <div>{title}</div>
-          <div>{subtitle}</div>
+        <div className="flex flex-row justify-between items-center">
+          <h1 className="text-xl lg:text-2xl font-bold text-white mb-1">
+            {name}
+          </h1>
+          <div className="text-[13px] text-gray-400">
+            <div>{title}</div>
+            <div>{subtitle}</div>
+          </div>
         </div>
       </div>
 
       {/* Profile Image */}
-      <div className="mb-6 lg:mb-8">
-        <div className="w-full h-48 lg:h-64 rounded-2xl overflow-hidden">
+      <div className="mb-6 lg:mb-8 justify-items-center items-center">
+        <div className="max-w-[250px] aspect-square rounded-2xl overflow-hidden ">
           <Image
             src={myPicture}
             width={256}
@@ -92,7 +94,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
 
       {/* Contact Info */}
       <div className="mb-6 lg:mb-8 space-y-3">
-        <div className="text-white font-medium text-sm lg:text-base">
+        <div className="text-white font-medium text-sm lg:text-base text-center">
           {email}
         </div>
         <div className="flex items-center text-gray-400 text-sm">
