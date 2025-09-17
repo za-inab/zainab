@@ -4,37 +4,40 @@
       "name": "Dubizzle",
       "description": "One of the largest online classified platforms in the Middle East, enabling users to buy, sell, and find services across a wide range of categories.",
       "liveLink": "https://dubai.dubizzle.com/",
-      "photo": "/file.svg"
+      "photo": "/Dubizzle.png"
     },
-    {
-      "name": "Portfolio Website",
-      "description": "A personal portfolio built with Next.js and TailwindCSS, showcasing projects, skills, and professional experience in a clean, responsive design.",
-      "liveLink": "https://yourportfolio.com",
-      "photo": "/file.svg"
-    },
+
     {
       "name": "Bayut",
       "description": "The UAE’s leading real estate marketplace, similar to Zillow, offering property listings, advanced search, and rental/sales solutions.",
       "liveLink": "https://www.bayut.com/",
-      "photo": "/file.svg"
+      "photo": "/Bayut.png"
     },
     {
       "name": "OLX Pakistan",
       "description": "A peer-to-peer online marketplace for buying and selling products, vehicles, property, and more, trusted by millions of users nationwide.",
       "liveLink": "https://www.olx.com.pk/",
-      "photo": "/file.svg"
+      "photo": "/Olx.png"
     },
     {
       "name": "12th Analytics",
       "description": "A data analytics platform designed for businesses to gain actionable insights through interactive dashboards and reporting tools.",
       "liveLink": "https://www.12thanalytics.com/",
-      "photo": "/file.svg"
+      "photo": "/12Analytics.png"
     },
     {
       "name": "AARHTI (Final Year Project)",
       "description": "A digital agriculture platform for trading crops and analyzing yields, with predictive insights powered by aerial imagery and analytics.",
       "liveLink": "#",
-      "photo": "/file.svg"
+      "photo": "/Aarhti.png"
+    }
+  ],
+  "unlistedProjects": [
+    {
+      "name": "Portfolio Website",
+      "description": "A personal portfolio built with Next.js and TailwindCSS, showcasing projects, skills, and professional experience in a clean, responsive design.",
+      "liveLink": "https://yourportfolio.com",
+      "photo": "/"
     }
   ]
 }
