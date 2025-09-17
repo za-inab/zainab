@@ -13,7 +13,7 @@ const SpecializationCard: React.FC<{ specialization: Specialization }> = ({
   specialization,
 }) => {
   return (
-    <div className="p-6 rounded-2xl border border-gray-700 bg-gray-900/40 hover:bg-gray-800/70 transition-all duration-300 shadow-lg flex justify-between items-start gap-4">
+    <div className="p-6 rounded-2xl border border-gray-700 bg-gray-900/40 hover:bg-gray-800/70 transition-all duration-300 shadow-lg flex justify-between items-start gap-4 w-[355px] sm:min-w-[100%]">
       <div>
         <h3 className="text-xl font-semibold text-white">
           {specialization.title}
@@ -40,7 +40,7 @@ const SpecializationCard: React.FC<{ specialization: Specialization }> = ({
 const SpecializationComponent: React.FC<{ data: Specialization[] }> = ({
   data,
 }) => (
-  <div className="space-y-6 mb-12">
+  <div className="space-y-6 mb-12 w-[100%]">
     <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
       My <span className="text-emerald-400">Specializations</span>
     </h2>
