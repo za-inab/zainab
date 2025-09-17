@@ -1,5 +1,4 @@
 import React from "react";
-import InfoCard from "@/components/InfoCard";
 import ContactForm from "@/components/ContactForm";
 import ProfileCard from "@/components/ProfileCard";
 import profileData from "@/data/ProfileData.json";
