@@ -13,7 +13,7 @@ export interface Project {
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   return (
-    <div className="rounded-lg border border-gray-700 bg-gray-900/40 overflow-hidden group hover:shadow-xl transition-all duration-300 p-2.5">
+    <div className="rounded-lg border border-gray-700 bg-gray-900/40 overflow-hidden group hover:shadow-xl transition-all duration-300 p-2.5 h-[410px] max-h-[410px] min-w-[283px] w-[355px] xl:w-[284px]">
       <div className="relative w-full h-48 overflow-hidden p-2">
         <Image
           src={project.photo}
@@ -50,11 +50,11 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
 };
 
 const ProjectComponent: React.FC<{ data: Project[] }> = ({ data }) => (
-  <div>
+  <div className="w-[100%] justify-items-center md:justify-items-start">
     <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-      Projects <span className="text-blue-400">●</span>
+      Projects <span className="text-emerald-400">●</span>
     </h2>
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 justify-items-center">
       {data.map((p, i) => (
         <ProjectCard key={i} project={p} />
       ))}
