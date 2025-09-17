@@ -4,52 +4,8 @@ import Timeline from "@/components/Timeline";
 import Skills from "@/components/Skills";
 import profileData from "@/data/ProfileData.json";
 import skillsData from "@/data/skills.json";
+import timelineData from "@/data/timelineData.json";
 // Sample data - replace with your actual data
-
-const timelineData = [
-  {
-    id: "1",
-    type: "work" as const,
-    period: "2020 - Present",
-    title: "Framer Designer & Developer",
-    organization: "Brunodee Agency",
-  },
-  {
-    id: "2",
-    type: "work" as const,
-    period: "2020 - Present",
-    title: "Front-End WordPress Developer",
-    organization: "Envato Market",
-  },
-  {
-    id: "3",
-    type: "work" as const,
-    period: "2013 - 2019",
-    title: "Webflow Developer & Co-Founder",
-    organization: "Designflow Studio",
-  },
-  {
-    id: "4",
-    type: "work" as const,
-    period: "2013 - 2019",
-    title: "Web Designer",
-    organization: "Freelance",
-  },
-  {
-    id: "5",
-    type: "work" as const,
-    period: "2013 - 2019",
-    title: "Leader Team of Marketing",
-    organization: "AHA Marketing Agency",
-  },
-  {
-    id: "6",
-    type: "education" as const,
-    period: "2010 - 2013",
-    title: "Bachelor Degree of Information Technology",
-    organization: "US RMIT University",
-  },
-];
 
 const ResumePage: React.FC = () => {
   return (
@@ -73,11 +29,11 @@ const ResumePage: React.FC = () => {
                     <span className="text-emerald-400">Experience</span>
                   </h1>
                 </div>
-                <Timeline items={timelineData} />
+                <Timeline items={timelineData.data} />
               </div>
 
               {/* Skills Section */}
-              <div className="mb-20">
+              <div>
                 <Skills skills={skillsData.skills} />
               </div>
             </div>

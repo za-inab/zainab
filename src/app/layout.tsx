@@ -63,7 +63,7 @@ export default function RootLayout({
       >
         <Navbar />
         {/* Main content (scrollable + takes remaining height) */}
-        <main className="flex-1 bg-black mt-24 overflow-y-visible">
+        <main className="flex-1 bg-black mt-22 overflow-y-visible">
           {children}
         </main>
         <Footer />

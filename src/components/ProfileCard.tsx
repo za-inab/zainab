@@ -100,7 +100,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
             width={256}
             height={256}
             alt={`${name} profile`}
-            className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-300"
+            className="w-full h-full object-cover "
           />
         </div>
       </div>
