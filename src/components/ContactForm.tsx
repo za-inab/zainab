@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { FiPaperclip } from "react-icons/fi";
 import { transporter, getEmailOptions } from "@/utils/emailTransporter";
+import { handleSubmit } from "@/utils/emailSubmit";
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -15,22 +16,9 @@ function ContactForm() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const subject = "Client Inquiry";
-    let messageToSend = `\n Client Message ${formData.message} \n`;
-    if (!formData.fullName || !formData.email || !formData.message) return;
-    else {
-      if (formData.phone)
-        messageToSend = messageToSend + `Clients Phone No ${formData.phone}`;
-    }
-    const info = transporter.sendMail(getEmailOptions(subject, messageToSend));
-    console.log("Form submitted:", formData);
-  };
-
   return (
     <form
-      onSubmit={handleSubmit}
+      onSubmit={(e) => handleSubmit(e, formData)}
       className="w-full max-w-2xl ] text-white space-y-8"
     >
       {/* Heading */}
