@@ -1,28 +1,30 @@
 "use client";
 import React, { useState } from "react";
 import { FiPaperclip } from "react-icons/fi";
+import { transporter, getEmailOptions } from "@/utils/emailTransporter";
 
 function ContactForm() {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
     phone: "",
-    subject: "",
-    budget: "",
     message: "",
-    attachment: null,
   });
 
   const handleChange = (e) => {
-    if (e.target.name === "attachment") {
-      setFormData({ ...formData, attachment: e.target.files[0] });
-    } else {
-      setFormData({ ...formData, [e.target.name]: e.target.value });
-    }
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    const subject = "Client Inquiry";
+    let messageToSend = `\n Client Message ${formData.message} \n`;
+    if (!formData.fullName || !formData.email || !formData.message) return;
+    else {
+      if (formData.phone)
+        messageToSend = messageToSend + `Clients Phone No ${formData.phone}`;
+    }
+    const info = transporter.sendMail(getEmailOptions(subject, messageToSend));
     console.log("Form submitted:", formData);
   };
 
@@ -36,11 +38,11 @@ function ContactForm() {
         <h2 className="text-4xl font-bold">
           Let&apos;s Work <span className="text-emerald-500">Together!</span>
         </h2>
-        <p className="text-gray-400 mt-2">hello@drake.design</p>
+        <p className="text-gray-400 mt-2">zainabasif.work@gmail.com</p>
       </div>
 
       {/* Grid Inputs */}
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="flex flex-col gap-8">
         {/* Full Name */}
         <div className="flex flex-col">
           <label className="text-xs uppercase text-gray-400 mb-2">
@@ -87,48 +89,6 @@ function ContactForm() {
             className="bg-transparent border-b border-gray-700 focus:border-emerald-500 outline-none py-2 placeholder-gray-500"
           />
         </div>
-
-        {/* Subject */}
-        <div className="flex flex-col">
-          <label className="text-xs uppercase text-gray-400 mb-2">
-            Subject <span className="text-red-500">*</span>
-          </label>
-          <select
-            name="subject"
-            value={formData.subject}
-            onChange={handleChange}
-            required
-            className="bg-transparent border-b border-gray-700 focus:border-emerald-500 outline-none py-2 text-gray-400"
-          >
-            <option value="" disabled hidden>
-              Select a subject
-            </option>
-            <option value="design" className="text-black">
-              Design
-            </option>
-            <option value="development" className="text-black">
-              Development
-            </option>
-            <option value="other" className="text-black">
-              Other
-            </option>
-          </select>
-        </div>
-
-        {/* Budget */}
-        <div className="flex flex-col md:col-span-2">
-          <label className="text-xs uppercase text-gray-400 mb-2">
-            Your Budget <span className="text-gray-500">(optional)</span>
-          </label>
-          <input
-            type="text"
-            name="budget"
-            placeholder="A range budget for your project"
-            value={formData.budget}
-            onChange={handleChange}
-            className="bg-transparent border-b border-gray-700 focus:border-emerald-500 outline-none py-2 placeholder-gray-500"
-          />
-        </div>
       </div>
 
       {/* Message */}
@@ -144,24 +104,10 @@ function ContactForm() {
         />
       </div>
 
-      {/* Attachment */}
-      <div className="flex items-center space-x-2 cursor-pointer">
-        <FiPaperclip className="text-gray-400" />
-        <label className="cursor-pointer text-sm text-gray-400">
-          Add an attachment
-          <input
-            type="file"
-            name="attachment"
-            onChange={handleChange}
-            className="hidden"
-          />
-        </label>
-      </div>
-
       {/* Button */}
       <button
         type="submit"
-        className="bg-emerald-500 text-black px-8 py-3 rounded-full font-medium hover:bg-black hover:border hover:border-emerald-500 hover:text-emerald-500 transition"
+        className="bg-emerald-500 text-white px-8 py-3 rounded-lg font-medium hover:bg-black hover:border-2 hover:border-emerald-500 hover:text-emerald-500 transition"
       >
         SEND MESSAGE
       </button>
