@@ -2,27 +2,30 @@
   "Spec": [
     {
       "title": "Full Stack Development",
-      "description": "Developed and maintained scalable web applications using modern technologies.",
-      "metrics": ["5+ Projects", "1000+ Hours"],
+      "description": "Developed and maintained scalable full stack web applications using modern technologies.",
+      "metrics": ["5+ Projects", "1000+ Coding Hours"],
       "icons": [
         { "name": "CodeBracketIcon", "color": "emerald-500" },
         { "name": "ClockIcon", "color": "emerald-500" }
-      ]
+      ],
+      "showIcons": false
     },
     {
       "title": "AI & Machine Learning",
-      "description": "Integrated end-to-end AI-powered features to enhance business workflows.",
-      "metrics": ["4+ Integration Projects"],
-      "icons": [{ "name": "CpuChipIcon", "color": "emerald-500" }]
+      "description": "Integrated and developed AI powered features to enhance business workflows.",
+      "metrics": ["4+ Integration Projects", "5 AI Powered Features"],
+      "icons": [{ "name": "CpuChipIcon", "color": "emerald-500" }],
+      "showIcons": false
     },
     {
       "title": "Debugging and Refactoring",
       "description": "Optimized legacy code and resolved critical issues to improve performance and maintainability.",
-      "metrics": ["100+ Issues Resolved", "10k+ Lines Refactored"],
+      "metrics": ["100+ Live Issues Resolved", "10k+ Lines Refactored"],
       "icons": [
         { "name": "BugAntIcon", "color": "emerald-500" },
         { "name": "WrenchScrewdriverIcon", "color": "emerald-500" }
-      ]
+      ],
+      "showIcons": false
     }
   ]
 }
