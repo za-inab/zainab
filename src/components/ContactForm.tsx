@@ -18,8 +18,17 @@ function ContactForm() {
 
   return (
     <form
-      onSubmit={(e) => handleSubmit(e, formData)}
+      onSubmit={async (e) => {
+        await handleSubmit(e, formData);
+        setFormData({
+          fullName: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+      }}
       className="w-full max-w-2xl ] text-white space-y-8"
+      method={"POST"}
     >
       {/* Heading */}
       <div>
