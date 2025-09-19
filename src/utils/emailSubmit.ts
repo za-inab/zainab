@@ -5,7 +5,6 @@ interface State {
   email: string;
   phone: string;
   message: string;
-  loading: boolean;
 }
 
 export const handleSubmit = async (states: State) => {

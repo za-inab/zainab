@@ -4,12 +4,12 @@ import React, { ChangeEvent, FormEvent, useState } from "react";
 import { toast } from "react-toastify";
 
 function ContactForm() {
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
     phone: "",
     message: "",
-    loading: false,
   });
 
   const handleChange = (e: ChangeEvent) => {
@@ -22,7 +22,6 @@ function ContactForm() {
 
   const submitHandler = async (e: FormEvent) => {
     e.preventDefault();
-    setFormData((prevState) => ({ ...prevState, loading: true }));
     const resp = await handleSubmit(formData);
     if (resp.success) {
       toast.info("Message Sent Successfully!");
@@ -31,13 +30,16 @@ function ContactForm() {
         email: "",
         phone: "",
         message: "",
-        loading: false,
       });
     } else toast.error(resp.message);
+    setLoading(false);
   };
   return (
     <form
-      onSubmit={(e) => submitHandler(e)}
+      onSubmit={(e) => {
+        setLoading(true);
+        submitHandler(e);
+      }}
       className="w-full max-w-2xl ] text-white space-y-8"
       method={"POST"}
     >
@@ -118,8 +120,8 @@ function ContactForm() {
       {/* Button */}
       <button
         type="submit"
-        className="bg-emerald-500 text-white px-8 py-3 rounded-lg font-medium hover:bg-black hover:border-2 hover:border-emerald-500 hover:text-emerald-500 transition"
-        disabled={formData.loading}
+        className="bg-emerald-500 text-white px-8 py-3 rounded-lg font-medium hover:bg-black hover:border-2 hover:border-emerald-500 hover:text-emerald-500 transition disabled:border-2 disabled:border-emerald-500 disabled:bg-black disabled:text-emerald-500"
+        disabled={loading}
       >
         SEND MESSAGE
       </button>
