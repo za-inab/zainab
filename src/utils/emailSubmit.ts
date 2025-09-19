@@ -17,7 +17,8 @@ export const handleSubmit = async (states: State) => {
     try {
       const res = await sendContact(subject, messageToSend);
       return await res.json();
-    } catch (error: Error) {
+    } catch (error: unknown) {
+      console.error('error: ', error);
       return { success: false, message: "Failed to send email" };
     }
   }
