@@ -1,5 +1,4 @@
 import { sendContact } from "@/lib/apis";
-import { getEmailOptions, transporter } from "./emailTransporter";
 
 interface State {
   fullName: string;
@@ -8,14 +7,19 @@ interface State {
   message: string;
 }
 
-export const handleSubmit = async (e: Event, states: State) => {
-  e.preventDefault();
+export const handleSubmit = async (states: State) => {
   const subject = "Client Inquiry";
-  let messageToSend = `\nClient Full Name: ${states.fullName}\nClientEmail: ${states.email}\nClient Message ${states.message} \n`;
+  let messageToSend = `Client Full Name: ${states.fullName} \nClientEmail: ${states.email} \nClient Message ${states.message}  \n`;
   if (!states.fullName || !states.email || !states.message) return;
   else {
     if (states.phone)
       messageToSend = messageToSend + `Clients Phone No ${states.phone}`;
-    sendContact(messageToSend);
+    try {
+      const res = await sendContact(subject, messageToSend);
+      return await res.json();
+    } catch (error: unknown) {
+      console.error('error: ', error);
+      return { success: false, message: "Failed to send email" };
+    }
   }
 };
