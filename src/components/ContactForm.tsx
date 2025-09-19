@@ -1,6 +1,6 @@
 "use client";
 import { handleSubmit } from "@/utils/emailSubmit";
-import React, { FormEvent, useState } from "react";
+import React, { ChangeEvent, FormEvent, useState } from "react";
 import { toast } from "react-toastify";
 
 function ContactForm() {
@@ -12,8 +12,12 @@ function ContactForm() {
     loading: false,
   });
 
-  const handleChange = (e: Event) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleChange = (e: ChangeEvent) => {
+    setFormData({
+      ...formData,
+      [(e.target as HTMLInputElement).name]: (e.target as HTMLInputElement)
+        .value,
+    });
   };
 
   const submitHandler = async (e: FormEvent) => {
@@ -73,7 +77,7 @@ function ContactForm() {
             name="email"
             placeholder="Your email address"
             value={formData.email}
-            onChange={handleChange}
+            onChange={(e) => handleChange(e)}
             required
             className="bg-transparent border-b border-gray-700 focus:border-emerald-500 outline-none py-2 placeholder-gray-500"
           />
