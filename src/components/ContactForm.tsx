@@ -1,6 +1,6 @@
 "use client";
-import React, { useState } from "react";
 import { handleSubmit } from "@/utils/emailSubmit";
+import React, { FormEvent, useState } from "react";
 import { toast } from "react-toastify";
 
 function ContactForm() {
@@ -9,24 +9,31 @@ function ContactForm() {
     email: "",
     phone: "",
     message: "",
+    loading: false,
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e: Event) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const submitHandler = async (e: FormEvent) => {
+    e.preventDefault();
+    setFormData((prevState) => ({ ...prevState, loading: true }));
+    const resp = await handleSubmit(formData);
+    if (resp.success) {
+      toast.info("Message Sent Successfully!");
+      setFormData({
+        fullName: "",
+        email: "",
+        phone: "",
+        message: "",
+        loading: false,
+      });
+    } else toast.error(resp.message);
+  };
   return (
     <form
-      onSubmit={async (e) => {
-        await handleSubmit(e, formData);
-        toast.info("Message Sent Successfully!");
-        setFormData({
-          fullName: "",
-          email: "",
-          phone: "",
-          message: "",
-        });
-      }}
+      onSubmit={(e) => submitHandler(e)}
       className="w-full max-w-2xl ] text-white space-y-8"
       method={"POST"}
     >
@@ -108,6 +115,7 @@ function ContactForm() {
       <button
         type="submit"
         className="bg-emerald-500 text-white px-8 py-3 rounded-lg font-medium hover:bg-black hover:border-2 hover:border-emerald-500 hover:text-emerald-500 transition"
+        disabled={formData.loading}
       >
         SEND MESSAGE
       </button>
