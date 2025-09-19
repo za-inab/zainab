@@ -1,8 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import { FiPaperclip } from "react-icons/fi";
-import { transporter, getEmailOptions } from "@/utils/emailTransporter";
 import { handleSubmit } from "@/utils/emailSubmit";
+import { toast } from "react-toastify";
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -20,6 +19,7 @@ function ContactForm() {
     <form
       onSubmit={async (e) => {
         await handleSubmit(e, formData);
+        toast.info("Message Sent Successfully!");
         setFormData({
           fullName: "",
           email: "",
@@ -90,13 +90,16 @@ function ContactForm() {
 
       {/* Message */}
       <div className="flex flex-col">
-        <label className="text-xs uppercase text-gray-400 mb-2">Message</label>
+        <label className="text-xs uppercase text-gray-400 mb-2">
+          Message <span className="text-red-500">*</span>
+        </label>
         <textarea
           name="message"
           placeholder="Write your message here ..."
           value={formData.message}
           onChange={handleChange}
-          rows={5}
+          required={true}
+          rows={4}
           className="bg-transparent border-b border-gray-700 focus:border-emerald-500 outline-none py-2 placeholder-gray-500"
         />
       </div>
