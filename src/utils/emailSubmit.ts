@@ -1,10 +1,11 @@
+import { sendContact } from "@/lib/apis";
 import { getEmailOptions, transporter } from "./emailTransporter";
 
-interface State{
-    "fullName":string,
-    "email":string,
-    "phone":string,
-    "message":string,
+interface State {
+  fullName: string;
+  email: string;
+  phone: string;
+  message: string;
 }
 
 export const handleSubmit = async (e: Event, states: State) => {
@@ -15,8 +16,6 @@ export const handleSubmit = async (e: Event, states: State) => {
   else {
     if (states.phone)
       messageToSend = messageToSend + `Clients Phone No ${states.phone}`;
-    console.log("messageToSend: ", messageToSend);
+    sendContact(messageToSend);
   }
-  // const info = transporter.sendMail(getEmailOptions(subject, messageToSend));
-  // console.log("Message sent:", info.messageId);
 };
