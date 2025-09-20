@@ -19,14 +19,14 @@ function HeroSection() {
       />
       <div className="p-4 absolute z-10 w-full text-center mt-10">
         <div className="flex flex-row justify-center items-center">
-          <h1 className="mt-20 md:mt-0 text-3xl sm:text-5xl lg:text-8xl xl:text-[124px] font-extrabold bg-heading text-center leading-tight sm:leading-tight md:text-8xl md:leading-tight bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-400 ">
+          <h1 className="mt-20 md:mt-0 text-6xl sm:text-7xl lg:text-8xl xl:text-[124px] font-extrabold bg-heading text-center leading-tight sm:leading-tight md:text-8xl md:leading-tight bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-400 ">
             Zainab <span className="text-emerald-500">Asif</span>
           </h1>
         </div>
-        <div className="flex flex-row text-neutral-300 justify-center items-center text-center ">
+        <div className="flex flex-row text-neutral-300 justify-center items-center text-center">
           <TypewriterEffectSmooth
-            className="text-center max-w-xl text-heading leading-relaxed md:text-lg md:leading-relaxed"
-            cursorClassName="bg-emerald-400"
+            className="text-center max-w-xl text-heading leading-relaxed md:text-lg md:leading-relaxed "
+            cursorClassName="text-center bg-emerald-400"
             words={words.words}
           />
         </div>

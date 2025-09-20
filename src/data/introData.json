@@ -1,16 +1,16 @@
 {
   "words": [
     {
-      "text": "  Software Engineer",
-      "className": "text-center text-lg md:text-2xl text-heading leading-relaxed md:text-2xl md:leading-relaxed text-emerald-400"
+      "text": "Software Engineer",
+      "className": "text-center text-[14px] md:text-2xl lg:text-[26px] text-heading leading-relaxed md:leading-relaxed text-emerald-400 text-nowrap"
     },
     {
-      "text": "and",
-      "className": "text-center text-2xl md:text-2xl text-heading leading-relaxed text-lg md:text-2xl md:leading-relaxed text-neutral-300"
+      "text": "&",
+      "className": "text-center text-[14px] md:text-2xl lg:text-[26px] text-heading leading-relaxed md:leading-relaxed  text-neutral-300 text-nowrap"
     },
     {
       "text": "Full Stack Developer",
-      "className": "text-center text-2xl  md:text-2xl text-heading leading-relaxed text-lg md:text-2xl md:leading-relaxedtext-emerald-400"
+      "className": "text-center text-[14px]  md:text-2xl lg:text-[26px] text-heading leading-relaxed md:leading-relaxed text-emerald-400 text-nowrap"
     }
   ]
 }
