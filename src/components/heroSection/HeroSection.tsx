@@ -31,13 +31,15 @@ function HeroSection() {
           />
         </div>
 
-        <div className="mt-4">
+        <div className="mt-4 flex flex-col sm:flex-row sm:items-center gap-6 items-center justify-center">
           <Link href={"/about"}>
             <Button
-              borderRadius="1rem"
+              borderRadius="3rem"
               className="
-            bg-transparent
-            text-white border-1 border-emerald-950"
+              bg-transparent
+            text-white border-1 border-emerald-950
+             font-medium hover:border-1 hover:border-emerald-500 hover:text-emerald-500 transition text-center
+            "
             >
               About Me
             </Button>

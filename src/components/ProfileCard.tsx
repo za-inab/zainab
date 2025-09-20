@@ -66,7 +66,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
   };
 
   return (
-    <div className="max-w-[350px] max-h-[620px] bg-gray-900/80 backdrop-blur-sm rounded-3xl p-[30px] lg:p-8 border border-gray-800 justify-center items-center text-center">
+    <div className="max-w-[350px] max-h-[620px] bg-black backdrop-blur-sm rounded-3xl p-[30px] lg:p-8 border-1 border-emerald-950 justify-center items-center text-center">
       <GlowingEffect
         spread={40}
         glow={true}
@@ -132,7 +132,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
       </div>
 
       {/* Hire Me Button */}
-      <button className="w-full font-medium bg-emerald-500 text-white py-3 lg:py-4 rounded-2xl transition-all duration-300 flex items-center justify-center gap-2  hover:bg-black hover:border-2 hover:border-emerald-500 hover:text-emerald-500 text-center">
+      <button className="w-full font-medium bg-emerald-500 text-black py-3 lg:py-4 rounded-2xl transition-all duration-300 flex items-center justify-center gap-2  hover:bg-black hover:border-2 hover:border-emerald-500 hover:text-emerald-500 text-center">
         {hireMeText}
       </button>
     </div>

@@ -36,7 +36,7 @@ function ContactForm() {
     setLoading(false);
   };
   return (
-    <div className="border-2 border-gray-800 rounded-xl px-12 py-10 hover:border-emerald-500">
+    <div className="border border-emerald-950 rounded-xl px-12 py-10 hover:border-2 hover:border-emerald-500">
       <form
         onSubmit={(e) => {
           setLoading(true);
@@ -122,7 +122,7 @@ function ContactForm() {
         {/* Button */}
         <button
           type="submit"
-          className="bg-emerald-500 text-white px-8 py-3 rounded-lg font-medium hover:bg-black hover:border-2 hover:border-emerald-500 hover:text-emerald-500 transition disabled:border-2 disabled:border-emerald-500 disabled:bg-black disabled:text-emerald-500"
+          className="bg-emerald-500 text-black px-8 py-3 rounded-lg font-medium hover:bg-black hover:border-2 hover:border-emerald-500 hover:text-emerald-500 transition disabled:border-2 disabled:border-emerald-500 disabled:bg-black disabled:text-emerald-500"
           disabled={loading}
         >
           SEND MESSAGE

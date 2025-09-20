@@ -13,14 +13,14 @@ export interface Project {
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   return (
-    <div className="rounded-lg border border-gray-700 bg-gray-900/40 overflow-hidden group hover:shadow-xl transition-all duration-300 p-2.5 h-[410px] max-h-[410px] min-w-[283px] w-[355px] xl:w-[284px]">
-      <div className="relative w-full h-48 overflow-hidden p-2">
+    <div className="rounded-lg border border-emerald-950 bg-black group hover:shadow-xl transition-all duration-300 p-2.5 h-[410px] max-h-[410px] min-w-[283px] w-[355px] xl:w-[284px] hover:border-[1.5px] hover:border-emerald-400">
+      <div className="relative w-full h-48 p-2">
         <Image
           src={project.photo}
           alt={project.name}
           width={500}
           height={300}
-          className="object-cover w-full h-full rounded-lg transform group-hover:scale-105 transition-transform duration-300"
+          className="object-cover w-full h-full rounded-lg transform  hover:scale-110 hover:-rotate-20 transition-transform duration-700"
         />
       </div>
       <div className="p-3">
