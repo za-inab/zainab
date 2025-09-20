@@ -3,7 +3,7 @@ import { Globe, MapPin } from "lucide-react";
 import myPicture from "@/assets/Grad_Pic.jpg";
 import Image from "next/image";
 import { GlowingEffect } from "./ui/glowing-effect";
-import { Twitter, Github, Linkedin } from "@deemlol/next-icons";
+import { Twitter, Github, Linkedin, Instagram } from "@deemlol/next-icons";
 
 interface SocialLink {
   id: string;

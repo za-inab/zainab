@@ -7,7 +7,7 @@ import words from "@/data/introData.json";
 
 function HeroSection() {
   return (
-    <div className="h-full w-full flex flex-col items-center justify-center ">
+    <div className="h-screen w-full flex flex-col items-center justify-center">
       <SparklesCore
         id="tsparticlesfullpage"
         background="black"
@@ -19,16 +19,13 @@ function HeroSection() {
       />
       <div className="p-4 absolute z-10 w-full text-center mt-10">
         <div className="flex flex-row justify-center items-center">
-          <h1 className="mt-20 md:mt-0 text-7xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-400 ">
-            Zainab{" "}
-            <span className="mt-20 md:mt-0 text-7xl md:text-7xl font-bold text-emerald-500">
-              Asif
-            </span>
+          <h1 className="mt-20 md:mt-0 text-3xl sm:text-5xl lg:text-8xl xl:text-[124px] font-extrabold bg-heading text-center leading-tight sm:leading-tight md:text-8xl md:leading-tight bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-400 ">
+            Zainab <span className="text-emerald-500">Asif</span>
           </h1>
         </div>
-        <div className="flex text-neutral-300 justify-center items-center text-center">
+        <div className="flex flex-row text-neutral-300 justify-center items-center text-center ">
           <TypewriterEffectSmooth
-            className="flex flex-row text-center"
+            className="text-center max-w-xl text-heading leading-relaxed md:text-lg md:leading-relaxed"
             cursorClassName="bg-emerald-400"
             words={words.words}
           />

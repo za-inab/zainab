@@ -2,7 +2,7 @@
 import { handleSubmit } from "@/utils/emailSubmit";
 import React, { ChangeEvent, FormEvent, useState } from "react";
 import { toast } from "react-toastify";
-import { GlowingEffect } from "./ui/glowing-effect";
+
 
 function ContactForm() {
   const [loading, setLoading] = useState(false);
