@@ -1,10 +1,11 @@
-import React from 'react';
+import React from "react";
 import { Globe, MapPin } from "lucide-react";
 import myPicture from "@/assets/Grad_Pic.jpg";
 import Image from "next/image";
 import { GlowingEffect } from "./ui/glowing-effect";
 import { Twitter, Github, Linkedin, Instagram } from "@deemlol/next-icons";
 import { MdOutlineEmail } from "react-icons/md";
+import SocialHandles from "./socialHandles";
 
 interface SocialLink {
   id: string;
@@ -119,7 +120,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
 
       {/* Social Links */}
       <div className="flex gap-3 mb-6 items-center justify-center">
-        {socialLinks.map((link) => (
+        {/* {socialLinks.map((link) => (
           <a
             key={link.id}
             href={link.url}
@@ -129,7 +130,15 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
           >
             {getIcons(link.icon)}
           </a>
-        ))}
+        ))} */}
+        <SocialHandles
+          handles={[]}
+          direction={"row"}
+          size={"lg"}
+          variant={"bordered"}
+          className={""}
+          showLabels={true}
+        />
       </div>
 
       {/* Hire Me Button */}
