@@ -1,8 +1,8 @@
 "use client";
 import { handleSubmit } from "@/utils/emailSubmit";
 import React, { ChangeEvent, FormEvent, useState } from "react";
+import { MdOutlineEmail } from "react-icons/md";
 import { toast } from "react-toastify";
-
 
 function ContactForm() {
   const [loading, setLoading] = useState(false);
@@ -122,9 +122,10 @@ function ContactForm() {
         {/* Button */}
         <button
           type="submit"
-          className="bg-emerald-500 text-black px-8 py-3 rounded-lg font-medium hover:bg-black hover:border-2 hover:border-emerald-500 hover:text-emerald-500 transition disabled:border-2 disabled:border-emerald-500 disabled:bg-black disabled:text-emerald-500"
+          className="bg-emerald-500 text-black px-8 py-3 rounded-lg font-medium hover:bg-black hover:border-2 hover:border-emerald-500 hover:text-emerald-500 transition disabled:border-2 disabled:border-emerald-500 disabled:bg-black disabled:text-emerald-500 flex flex-row gap-2 items-center justify-center"
           disabled={loading}
         >
+          <MdOutlineEmail size={20} />
           SEND MESSAGE
         </button>
       </form>

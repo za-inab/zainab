@@ -4,6 +4,7 @@ import myPicture from "@/assets/Grad_Pic.jpg";
 import Image from "next/image";
 import { GlowingEffect } from "./ui/glowing-effect";
 import { Twitter, Github, Linkedin, Instagram } from "@deemlol/next-icons";
+import { MdOutlineEmail } from "react-icons/md";
 
 interface SocialLink {
   id: string;
@@ -132,9 +133,10 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
       </div>
 
       {/* Hire Me Button */}
-      <button className="w-full font-medium bg-emerald-500 text-black py-3 lg:py-4 rounded-2xl transition-all duration-300 flex items-center justify-center gap-2  hover:bg-black hover:border-2 hover:border-emerald-500 hover:text-emerald-500 text-center">
+      <div className="w-full font-medium bg-emerald-500 text-black py-3 lg:py-4 rounded-2xl transition-all duration-300 flex items-center justify-center gap-2  hover:bg-black hover:border-2 hover:border-emerald-500 hover:text-emerald-500 text-center">
+        <MdOutlineEmail size={20} />
         {hireMeText}
-      </button>
+      </div>
     </div>
   );
 };
