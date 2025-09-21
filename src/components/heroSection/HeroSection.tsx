@@ -4,6 +4,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/moving-border";
 import { TypewriterEffectSmooth } from "../ui/typewriter-effect";
 import words from "@/data/introData.json";
+import SocialHandles from "../socialHandles";
+import Social from "@/data/SocialHandles.json";
 
 function HeroSection() {
   return (
@@ -44,6 +46,17 @@ function HeroSection() {
               About Me
             </Button>
           </Link>
+        </div>
+
+        <div className="fixed bottom-5 left-6 items-center justify-center border-2 border-emerald-950 rounded-full p-2">
+          <SocialHandles
+            handles={Social.handles}
+            direction={"col"}
+            size={"md"}
+            variant={"bordered"}
+            className={""}
+            showLabels={true}
+          />
         </div>
       </div>
     </div>

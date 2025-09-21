@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { Globe, MapPin } from "lucide-react";
 import myPicture from "@/assets/Grad_Pic.jpg";
@@ -122,17 +121,6 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
 
       {/* Social Links */}
       <div className="flex gap-3 mb-6 items-center justify-center">
-        {/* {socialLinks.map((link) => (
-          <a
-            key={link.id}
-            href={link.url}
-            className="group w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:border-emerald-400 transition-all duration-300"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {getIcons(link.icon)}
-          </a>
-        ))} */}
         <SocialHandles
           handles={Social.handles}
           direction={"row"}

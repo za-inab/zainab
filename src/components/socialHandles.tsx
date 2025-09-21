@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {
   Twitter,
@@ -11,7 +12,6 @@ import {
   ExternalLink,
 } from "lucide-react";
 import { FaUpwork } from "react-icons/fa6";
-
 
 interface SocialHandle {
   id: string;
