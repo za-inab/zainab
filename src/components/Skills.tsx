@@ -65,15 +65,15 @@ function SkillCard({ skill }: { skill: Skill }) {
 
 const Skills: React.FC<SkillsProps> = ({
   skills,
-  title = "Skills",
+  title = "My",
   className = "",
 }) => {
   return (
     <div className={`${className}`}>
       {/* Section Header */}
-      <div className="mb-12">
+      <div className="mb-8">
         <h2 className="text-4xl md:text-5xl font-bold text-white">
-          {title} <span className="text-emerald-400">●</span>
+          {title} <span className="text-emerald-400">Skills</span>
         </h2>
       </div>
 

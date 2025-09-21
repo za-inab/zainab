@@ -20,17 +20,17 @@ const ResumePage: React.FC = () => {
           </h2>
         </div>
         <div className="pb-16 px-4 md:px-8 relative z-10">
-          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 lg:gap-12 items-start justify-center min-h-[calc(100vh-144px)]">
+          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 gap-y-14 lg:gap-12 items-center lg:items-start justify-center min-h-[calc(100vh-144px)]">
             {/* Profile Card - Side positioned on desktop, top on mobile */}
-            <div className="w-full lg:w-80 lg:sticky lg:top-24 flex-shrink-0">
+            <div className="w-full lg:w-80 lg:sticky lg:top-24 flex-shrink-0 justify-items-center">
               <ProfileCard {...profileData} />
             </div>
 
             {/* Main Content - Scrollable timeline and skills */}
-            <div className="flex-1 max-w-4xl">
+            <div className="flex-1 max-w-4xl justify-center items-center justify-items-center">
               {/* Timeline Section */}
               <div className="mb-20">
-                <div className="mb-8 lg:mb-12">
+                <div className="mb-8 lg:mb-12 text-center sm:text-left">
                   <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
                     <span className="text-white">Education &</span>{" "}
                     <span className="text-emerald-400">Experience</span>
@@ -40,7 +40,7 @@ const ResumePage: React.FC = () => {
               </div>
 
               {/* Skills Section */}
-              <div>
+              <div className="text-center sm:text-left w-full">
                 <Skills skills={skillsData.skills} />
               </div>
             </div>
