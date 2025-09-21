@@ -12,7 +12,7 @@ A modern, responsive personal portfolio website built with Next.js 15 and TypeSc
 - **Toast Notifications**: User feedback with react-toastify
 - **Icon Libraries**: Comprehensive icon sets from Lucide, Tabler, and React Icons
 - **Type Safety**: Full TypeScript implementation
-- **Modern UI**: Styled with Tailwind CSS and Radix UI components
+- **Modern UI**: Styled with Tailwind CSS and Aceternity UI  (https://ui.aceternity.com/) components
 
 ## 🛠️ Tech Stack
 
@@ -66,7 +66,7 @@ portfolio/
 
 1. **Clone the repository**
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/za-inab/zainab.git
    cd portfolio
    ```
 
