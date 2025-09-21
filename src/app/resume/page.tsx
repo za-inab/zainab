@@ -5,7 +5,6 @@ import Skills from "@/components/Skills";
 import profileData from "@/data/ProfileData.json";
 import skillsData from "@/data/skills.json";
 import timelineData from "@/data/timelineData.json";
-// Sample data - replace with your actual data
 
 const ResumePage: React.FC = () => {
   return (
