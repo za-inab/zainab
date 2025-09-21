@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {
   Twitter,
@@ -10,6 +11,7 @@ import {
   Youtube,
   ExternalLink,
 } from "lucide-react";
+import { FaUpwork } from "react-icons/fa6";
 
 interface SocialHandle {
   id: string;
@@ -22,6 +24,7 @@ interface SocialHandle {
     | "website"
     | "email"
     | "youtube"
+    | "upwork"
     | "custom";
   url: string;
   label?: string;
@@ -69,6 +72,8 @@ const SocialHandles: React.FC<SocialHandlesProps> = ({
         return <Mail {...iconProps} />;
       case "youtube":
         return <Youtube {...iconProps} />;
+      case "upwork":
+        return <FaUpwork {...iconProps} />;
       default:
         return <ExternalLink {...iconProps} />;
     }

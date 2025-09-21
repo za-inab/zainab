@@ -1,9 +1,12 @@
-import React from 'react';
+import React from "react";
 import { Globe, MapPin } from "lucide-react";
 import myPicture from "@/assets/Grad_Pic.jpg";
 import Image from "next/image";
 import { GlowingEffect } from "./ui/glowing-effect";
-import { Twitter, Github, Linkedin } from "@deemlol/next-icons";
+import { Twitter, Github, Linkedin, Instagram } from "@deemlol/next-icons";
+import { MdOutlineEmail } from "react-icons/md";
+import SocialHandles from "./socialHandles";
+import Social from "@/data/SocialHandles.json";
 
 interface SocialLink {
   id: string;
@@ -66,7 +69,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
   };
 
   return (
-    <div className="max-w-[350px] max-h-[620px] bg-gray-900/80 backdrop-blur-sm rounded-3xl p-[30px] lg:p-8 border border-gray-800 justify-center items-center text-center">
+    <div className="max-w-[350px] max-h-[620px] bg-black backdrop-blur-sm rounded-3xl p-[30px] lg:p-8 border-1 border-emerald-950 justify-center items-center text-center">
       <GlowingEffect
         spread={40}
         glow={true}
@@ -118,23 +121,21 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
 
       {/* Social Links */}
       <div className="flex gap-3 mb-6 items-center justify-center">
-        {socialLinks.map((link) => (
-          <a
-            key={link.id}
-            href={link.url}
-            className="group w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:border-emerald-400 transition-all duration-300"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {getIcons(link.icon)}
-          </a>
-        ))}
+        <SocialHandles
+          handles={Social.handles}
+          direction={"row"}
+          size={"md"}
+          variant={"bordered"}
+          className={""}
+          showLabels={true}
+        />
       </div>
 
       {/* Hire Me Button */}
-      <button className="w-full font-medium bg-emerald-500 text-white py-3 lg:py-4 rounded-2xl transition-all duration-300 flex items-center justify-center gap-2  hover:bg-black hover:border-2 hover:border-emerald-500 hover:text-emerald-500 text-center">
+      <div className="w-full font-medium bg-emerald-500 text-black py-3 lg:py-4 rounded-2xl transition-all duration-300 flex items-center justify-center gap-2  hover:bg-black hover:border-2 hover:border-emerald-500 hover:text-emerald-500 text-center">
+        <MdOutlineEmail size={20} />
         {hireMeText}
-      </button>
+      </div>
     </div>
   );
 };

@@ -13,7 +13,7 @@ const SpecializationCard: React.FC<{ specialization: Specialization }> = ({
   specialization,
 }) => {
   return (
-    <div className="p-6 rounded-2xl border border-gray-700 bg-gray-900/40 hover:bg-gray-800/70 transition-all duration-300 shadow-lg flex justify-between items-start gap-4 w-[355px] sm:min-w-[100%]">
+    <div className="p-6 rounded-2xl border border-emerald-950 bg-black  transition-all duration-300 shadow-lg flex justify-between items-start gap-4 w-[355px] sm:min-w-[100%] hover:border-[1.5px] hover:border-emerald-400">
       <div>
         <h3 className="text-xl font-semibold text-white">
           {specialization.title}
