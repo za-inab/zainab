@@ -52,7 +52,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
 
 const ProjectComponent: React.FC<{ data: Project[] }> = ({ data }) => (
   <div className="w-[100%] justify-items-center md:justify-items-start">
-    <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+    <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold text-white mb-6">
       My <span className="text-emerald-400">Projects</span>
     </h2>
     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 justify-items-center">

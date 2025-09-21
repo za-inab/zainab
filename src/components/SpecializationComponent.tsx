@@ -41,7 +41,7 @@ const SpecializationComponent: React.FC<{ data: Specialization[] }> = ({
   data,
 }) => (
   <div className="space-y-6 mb-12 w-[100%]">
-    <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+    <h2 className="font-bold text-white mb-6 text-3xl md:text-4xl lg:text-4xl text-center sm:text-left ">
       My <span className="text-emerald-400">Specializations</span>
     </h2>
     {data.map((s, i) => (

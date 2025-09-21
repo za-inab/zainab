@@ -7,9 +7,11 @@ function AboutPage() {
     <div className="flex flex-col h-full w-full justify-center items-center mb-10">
       <div className="flex flex-col justify-center items-center bg-black text-white lg:px-10 mx-3">
         {/* Heading */}
-        <div className="text-center mb-12 mt-2">
-          <p className="text-gray-400 mb-2">Get to know me</p>
-          <h2 className="text-4xl font-bold relative inline-block">
+        <div className="text-center mb-12">
+          <p className="text-gray-400 mb-2 text-sm md:text-[16px] lg:text-lg">
+            Get to know me
+          </p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 relative inline-block">
             About <span className="text-emerald-400">Me</span>
             {/* Animated underline */}
             <span className="absolute left-0 bottom-[-8px] w-full h-[3px] bg-emerald-500 animate-pulse rounded-full"></span>

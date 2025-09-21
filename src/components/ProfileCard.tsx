@@ -72,12 +72,12 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
   return (
     <div className="max-w-[350px] max-h-[620px] bg-black backdrop-blur-sm rounded-3xl p-[30px] lg:p-8 border-2 border-emerald-900 justify-center items-center text-center shadow-2xl shadow-emerald-400/20 hover:shadow-emerald-500/30 transition-shadow duration-500 ">
       <GlowingEffect
-        spread={40}
+        spread={50}
         glow={true}
         disabled={false}
-        proximity={64}
-        inactiveZone={0.01}
-        borderWidth={3}
+        proximity={70}
+        inactiveZone={0.2}
+        borderWidth={4}
         variant={"green"}
       />
 

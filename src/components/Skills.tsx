@@ -52,7 +52,7 @@ function SkillCard({ skill }: { skill: Skill }) {
           isHovered ? "opacity-100 scale-100" : "opacity-0 scale-125"
         }`}
       >
-        <span className="text-white text-xs font-medium text-center leading-tight truncate">
+        <span className="text-white text-xs md:text-sm font-medium text-center leading-tight text-wrap truncate">
           {skill.name}
         </span>
       </div>
@@ -72,7 +72,7 @@ const Skills: React.FC<SkillsProps> = ({
     <div className={`${className}`}>
       {/* Section Header */}
       <div className="mb-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-white">
+        <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold mb-4 text-white">
           {title} <span className="text-emerald-400">Skills</span>
         </h2>
       </div>
