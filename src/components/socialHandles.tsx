@@ -12,28 +12,7 @@ import {
 } from "lucide-react";
 import { FaUpwork } from "react-icons/fa6";
 
-[
-  {
-    id: 1,
-    platform: "github",
-    url: "https://github.com/za-inab",
-  },
-  {
-    id: 2,
-    platform: "linkedin",
-    url: "https://www.linkedin.com/in/zainab-asif-2206/",
-  },
-  {
-    id: 3,
-    platform: "twitter",
-    url: "https://x.com/xainab_asif",
-  },
-  {
-    id: 4,
-    platform: "upwork",
-    url: "",
-  },
-];
+
 interface SocialHandle {
   id: string;
   platform:

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Globe, MapPin } from "lucide-react";
 import myPicture from "@/assets/Grad_Pic.jpg";
@@ -6,6 +7,7 @@ import { GlowingEffect } from "./ui/glowing-effect";
 import { Twitter, Github, Linkedin, Instagram } from "@deemlol/next-icons";
 import { MdOutlineEmail } from "react-icons/md";
 import SocialHandles from "./socialHandles";
+import Social from "@/data/SocialHandles.json";
 
 interface SocialLink {
   id: string;
@@ -132,9 +134,9 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
           </a>
         ))} */}
         <SocialHandles
-          handles={[]}
+          handles={Social.handles}
           direction={"row"}
-          size={"lg"}
+          size={"md"}
           variant={"bordered"}
           className={""}
           showLabels={true}
