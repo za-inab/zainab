@@ -36,7 +36,7 @@ function ContactForm() {
     setLoading(false);
   };
   return (
-    <div className="border border-emerald-950 rounded-xl px-12 py-10 hover:border-2 hover:border-emerald-500">
+    <div className="border-2 border-emerald-900 rounded-xl px-12 py-10 hover:border-2 hover:border-emerald-500 shadow-2xl shadow-emerald-400/20 hover:shadow-emerald-500/30 transition-all duration-500">
       <form
         onSubmit={(e) => {
           setLoading(true);
@@ -47,7 +47,7 @@ function ContactForm() {
       >
         {/* Heading */}
         <div>
-          <h2 className="text-4xl font-bold">
+          <h2 className="text-3xl md:text-4xl font-bold">
             Drop Your <span className="text-emerald-500">Message !</span>
           </h2>
           <p className="text-gray-400 mt-3">zainabasif.work@gmail.com</p>

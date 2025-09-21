@@ -7,6 +7,7 @@ import { Twitter, Github, Linkedin, Instagram } from "@deemlol/next-icons";
 import { MdOutlineEmail } from "react-icons/md";
 import SocialHandles from "./socialHandles";
 import Social from "@/data/SocialHandles.json";
+import Link from "next/link";
 
 interface SocialLink {
   id: string;
@@ -69,14 +70,14 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
   };
 
   return (
-    <div className="max-w-[350px] max-h-[620px] bg-black backdrop-blur-sm rounded-3xl p-[30px] lg:p-8 border-1 border-emerald-950 justify-center items-center text-center">
+    <div className="max-w-[350px] max-h-[620px] bg-black backdrop-blur-sm rounded-3xl p-[30px] lg:p-8 border-2 border-emerald-900 justify-center items-center text-center shadow-2xl shadow-emerald-400/20 hover:shadow-emerald-500/30 transition-shadow duration-500 ">
       <GlowingEffect
-        spread={40}
+        spread={50}
         glow={true}
         disabled={false}
-        proximity={64}
-        inactiveZone={0.01}
-        borderWidth={3}
+        proximity={70}
+        inactiveZone={0.2}
+        borderWidth={4}
         variant={"green"}
       />
 
@@ -132,10 +133,12 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
       </div>
 
       {/* Hire Me Button */}
-      <div className="w-full font-medium bg-emerald-500 text-black py-3 lg:py-4 rounded-2xl transition-all duration-300 flex items-center justify-center gap-2  hover:bg-black hover:border-2 hover:border-emerald-500 hover:text-emerald-500 text-center">
-        <MdOutlineEmail size={20} />
-        {hireMeText}
-      </div>
+      <Link href={"/contact"}>
+        <div className="w-full font-medium bg-emerald-500 text-black py-3 lg:py-4 rounded-2xl transition-all duration-300 flex items-center justify-center gap-2  hover:bg-black hover:border-2 hover:border-emerald-500 hover:text-emerald-500 text-center">
+          <MdOutlineEmail size={20} />
+          {hireMeText}
+        </div>
+      </Link>
     </div>
   );
 };

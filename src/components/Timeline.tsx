@@ -44,10 +44,10 @@ const TimelineItemComponent: React.FC<{
         <div className="mb-1 text-sm text-emerald-400 font-medium transition-all duration-300 group-hover:text-emerald-300">
           {item.period}
         </div>
-        <h3 className="text-lg font-semibold text-white mb-1 transition-all duration-300 group-hover:text-emerald-50">
+        <h3 className="text-lg font-semibold text-white mb-1 transition-all duration-300 group-hover:text-emerald-50 text-wrap">
           {item.title}
         </h3>
-        <p className="text-gray-400 text-sm transition-all duration-300 group-hover:text-gray-300">
+        <p className="text-gray-400 text-sm transition-all duration-300 group-hover:text-gray-300 text-wrap">
           {item.organization}
         </p>
         {item.description && (
@@ -62,11 +62,11 @@ const TimelineItemComponent: React.FC<{
 
 const Timeline: React.FC<TimelineProps> = ({ items, className = "" }) => {
   return (
-    <div className={`relative ${className}`}>
+    <div className={`relative ${className} `}>
       {items.map((item, index) => (
-        <TimelineItemComponent 
-          key={item.id} 
-          item={item} 
+        <TimelineItemComponent
+          key={item.id}
+          item={item}
           isLast={index === items.length - 1}
         />
       ))}

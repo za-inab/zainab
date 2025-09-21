@@ -9,7 +9,7 @@ import Social from "@/data/SocialHandles.json";
 
 function HeroSection() {
   return (
-    <div className="h-screen w-full flex flex-col items-center justify-center">
+    <div className="h-screen w-full flex flex-col items-center justify-center min-h-screen">
       <SparklesCore
         id="tsparticlesfullpage"
         background="black"
@@ -19,9 +19,9 @@ function HeroSection() {
         className="w-full h-full"
         particleColor="#05df72"
       />
-      <div className="p-4 absolute z-10 w-full text-center mt-10">
+      <div className="p-4 absolute z-10 w-full text-center mt-20 flex flex-col justify-center">
         <div className="flex flex-row justify-center items-center">
-          <h1 className="mt-20 md:mt-0 text-6xl sm:text-7xl lg:text-8xl xl:text-[124px] font-extrabold bg-heading text-center leading-tight sm:leading-tight md:text-8xl md:leading-tight bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-400 ">
+          <h1 className="mt-20 sm:mt-30 text-6xl sm:text-7xl  lg:text-8xl xl:text-[124px] font-extrabold bg-heading text-center leading-tight sm:leading-tight md:text-8xl md:leading-tight bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-400 ">
             Zainab <span className="text-emerald-500">Asif</span>
           </h1>
         </div>
@@ -48,7 +48,10 @@ function HeroSection() {
           </Link>
         </div>
 
-        <div className="fixed bottom-5 left-6 items-center justify-center border-2 border-emerald-950 rounded-full p-2">
+        <div
+          className="relative bottom-13 left-6 items-center justify-center border-2 border-emerald-950 rounded-full p-2
+          hidden sm:flex xl:left-8 transition-all duration-300 ease-in-out hover:scale-105 w-fit"
+        >
           <SocialHandles
             handles={Social.handles}
             direction={"col"}

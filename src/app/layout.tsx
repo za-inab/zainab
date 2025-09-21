@@ -8,13 +8,13 @@ import Footer from "@/components/Footer";
 
   const montserrat = Montserrat({
     subsets: ["latin"],
-    weight: ["400", "500", "700"],
+    weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
     variable: "--font-montserrat",
   });
 
   const poppins = Poppins({
     variable: "--font-poppins",
-    weight: ["400", "500", "700"],
+    weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
     subsets: ["latin"],
   });
 
@@ -59,12 +59,12 @@ import Footer from "@/components/Footer";
       <html lang="en">
         <body
           className={cn(
-            `${poppins.variable} ${montserrat.variable} antialiased h-svh flex flex-col`
+            `${poppins.variable} ${montserrat.variable} antialiased h-svh w-full flex flex-col max-w-[1750px] justify-self-center relative `
           )}
         >
           <Navbar />
           {/* Main content (scrollable + takes remaining height) */}
-          <main className="flex-1 bg-black mt-22 overflow-y-visible">
+          <main className="flex-1 mt-15 sm:mt-24 bg-black overflow-y-visible p-3">
             {children}
           </main>
           <Footer />

@@ -14,7 +14,7 @@ export interface Project {
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   return (
-    <div className="rounded-lg border border-emerald-950 bg-black group hover:shadow-xl transition-all duration-300 p-2.5 h-[410px] max-h-[410px] min-w-[283px] w-[355px] xl:w-[284px] hover:border-[1.5px] hover:border-emerald-400">
+    <div className="rounded-lg border-2 border-emerald-900 bg-black group hover:shadow-xl p-2.5 h-[410px] max-h-[410px] min-w-[283px] w-[355px] xl:w-[284px] hover:border-[1.5px] hover:border-emerald-400 shadow-2xl shadow-emerald-400/15 hover:shadow-emerald-500/20 transition-all duration-500">
       <div className="relative w-full h-48 p-2">
         <Image
           src={project.photo}
@@ -52,8 +52,8 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
 
 const ProjectComponent: React.FC<{ data: Project[] }> = ({ data }) => (
   <div className="w-[100%] justify-items-center md:justify-items-start">
-    <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-      Projects <span className="text-emerald-400">●</span>
+    <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold text-white mb-6">
+      My <span className="text-emerald-400">Projects</span>
     </h2>
     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 justify-items-center">
       {data.map((p, i) => (

@@ -115,7 +115,7 @@ const SocialHandles: React.FC<SocialHandlesProps> = ({
   };
 
   return (
-    <div className={`flex ${flexDirection} ${gap} ${className}`}>
+    <div className={`${className} flex ${flexDirection} ${gap} `}>
       {handles.map((handle) => (
         <div key={handle.id} className="group relative">
           <button
