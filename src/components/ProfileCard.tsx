@@ -1,9 +1,8 @@
 import React from "react";
-import { Globe, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
 import myPicture from "@/assets/Grad_Pic.jpg";
 import Image from "next/image";
 import { GlowingEffect } from "./ui/glowing-effect";
-import { Twitter, Github, Linkedin, Instagram } from "@deemlol/next-icons";
 import { MdOutlineEmail } from "react-icons/md";
 import SocialHandles from "./socialHandles";
 import Social from "@/data/SocialHandles.json";
@@ -11,7 +10,7 @@ import Link from "next/link";
 
 interface SocialLink {
   id: string;
-  platform: "twitter" | "website" | "instagram" | "github";
+  platform: string;
   url: string;
   icon?: React.ReactNode;
 }
@@ -28,47 +27,14 @@ interface ProfileCardProps {
   socialLinks: SocialLink[];
 }
 
-const getIcons = (name: string) => {
-  const icons = {
-    twitter: <Twitter size={22} color="#FFFFFF" />,
-    github: <Github size={22} color="#FFFFFF" />,
-    linkedin: <Linkedin size={22} color="#FFFFFF" />,
-  };
-
-  return icons[name];
-};
-
 const ProfileCard: React.FC<ProfileCardProps> = ({
   name,
   title,
   subtitle,
-  profileImage,
   email,
   location,
-  copyright,
   hireMeText = "HIRE ME!",
-  socialLinks,
 }) => {
-  const getSocialIcon = (platform: string) => {
-    const iconProps = {
-      size: 20,
-      className: "text-gray-400 group-hover:text-white transition-colors",
-    };
-
-    switch (platform) {
-      case "twitter":
-        return <Twitter {...iconProps} />;
-      case "website":
-        return <Globe {...iconProps} />;
-      case "instagram":
-        return <Instagram {...iconProps} />;
-      case "github":
-        return <Globe {...iconProps} />; // Using Globe as fallback
-      default:
-        return <Globe {...iconProps} />;
-    }
-  };
-
   return (
     <div className="max-w-[350px] max-h-[620px] bg-black backdrop-blur-sm rounded-3xl p-[30px] lg:p-8 border-2 border-emerald-900 justify-center items-center text-center shadow-2xl shadow-emerald-400/20 hover:shadow-emerald-500/30 transition-shadow duration-500 ">
       <GlowingEffect

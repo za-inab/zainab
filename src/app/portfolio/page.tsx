@@ -1,7 +1,9 @@
 "use client";
 import React from "react";
-import ProjectComponent from "@/components/ProjectComponent";
-import SpecializationComponent from "@/components/SpecializationComponent";
+import ProjectComponent, { Project } from "@/components/ProjectComponent";
+import SpecializationComponent, {
+  Specialization,
+} from "@/components/SpecializationComponent";
 import ProjectsData from "@/data/ProjectsData.json";
 import SpecData from "@/data/SpecializationData.json";
 import ProfileCard from "@/components/ProfileCard";
