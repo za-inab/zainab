@@ -14,7 +14,7 @@ export interface Project {
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   return (
-    <div className="rounded-lg border border-emerald-950 bg-black group hover:shadow-xl p-2.5 h-[410px] max-h-[410px] min-w-[283px] w-[355px] xl:w-[284px] hover:border-[1.5px] hover:border-emerald-400 shadow-2xl shadow-emerald-400/15 hover:shadow-emerald-500/20 transition-all duration-500">
+    <div className="rounded-lg border-2 border-emerald-900 bg-black group hover:shadow-xl p-2.5 h-[410px] max-h-[410px] min-w-[283px] w-[355px] xl:w-[284px] hover:border-[1.5px] hover:border-emerald-400 shadow-2xl shadow-emerald-400/15 hover:shadow-emerald-500/20 transition-all duration-500">
       <div className="relative w-full h-48 p-2">
         <Image
           src={project.photo}

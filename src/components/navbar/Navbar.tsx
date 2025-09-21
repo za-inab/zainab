@@ -24,7 +24,7 @@ function Navbar() {
   return (
     <nav
       className={cn(
-        "fixed top-0 w-screen h-20 z-100 transition-all duration-300 ease-in-out",
+        "fixed top-0 h-20 z-100 transition-all duration-300 ease-in-out w-full",
         "flex items-center justify-center py-3 max-w-[1750px] self-center",
         isScrolled
           ? "bg-gradient-to-r from-black/30 via-black/20 to-black/30 backdrop-blur-lg shadow-2xl shadow-black/40"

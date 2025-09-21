@@ -59,7 +59,7 @@ import Footer from "@/components/Footer";
       <html lang="en">
         <body
           className={cn(
-            `${poppins.variable} ${montserrat.variable} antialiased h-svh flex flex-col max-w-[1750px] justify-self-center relative w-full`
+            `${poppins.variable} ${montserrat.variable} antialiased h-svh w-full flex flex-col max-w-[1750px] justify-self-center relative `
           )}
         >
           <Navbar />

@@ -7,7 +7,7 @@ function AboutPage() {
     <div className="flex flex-col h-full w-full justify-center items-center mb-10">
       <div className="flex flex-col justify-center items-center bg-black text-white lg:px-10 mx-3">
         {/* Heading */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 mt-2">
           <p className="text-gray-400 mb-2">Get to know me</p>
           <h2 className="text-4xl font-bold relative inline-block">
             About <span className="text-emerald-400">Me</span>
