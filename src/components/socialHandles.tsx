@@ -12,10 +12,9 @@ import {
   ExternalLink,
 } from "lucide-react";
 import { FaUpwork } from "react-icons/fa6";
+/*
 
-interface SocialHandle {
-  id: string;
-  platform:
+
     | "twitter"
     | "instagram"
     | "linkedin"
@@ -26,6 +25,10 @@ interface SocialHandle {
     | "youtube"
     | "upwork"
     | "custom";
+*/
+interface SocialHandle {
+  id: string;
+  platform: string;  
   url: string;
   label?: string;
   customIcon?: React.ReactNode;

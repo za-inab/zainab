@@ -3,7 +3,7 @@ import { GraduationCap, Briefcase } from 'lucide-react';
 
 interface TimelineItem {
   id: string;
-  type: 'education' | 'work';
+  type: string; //'education' | 'work'
   period: string;
   title: string;
   organization: string;
@@ -15,7 +15,7 @@ interface TimelineProps {
   className?: string;
 }
 
-const TimelineIcon: React.FC<{ type: "education" | "work" }> = ({ type }) => {
+const TimelineIcon: React.FC<{ type: string }> = ({ type }) => {
   const Icon = type === "education" ? GraduationCap : Briefcase;
 
   return (
