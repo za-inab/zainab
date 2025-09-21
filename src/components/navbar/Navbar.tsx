@@ -69,18 +69,15 @@ function Navbar() {
           )}
         >
           {/* Decorative top accent */}
-          <div className="absolute top-0 right-0 w-full h-1 bg-gradient-to-r from-transparent via-emerald-400 to-transparent opacity-60" />
+          <div />
 
           {/* Sidebar Header */}
           <div className="relative flex items-center justify-between px-6 py-6 border-b border-emerald-500/10 bg-gradient-to-r from-emerald-900/10 to-transparent">
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center px-4">
               <div>
-                <span className="font-bold text-xl text-emerald-400 tracking-wide">
+                <span className="font-bold text-xl text-white tracking-wide">
                   Menu
                 </span>
-                <p className="text-xs text-emerald-300/60 font-medium">
-                  Navigate Portfolio
-                </p>
               </div>
             </div>
             <button
@@ -94,7 +91,7 @@ function Navbar() {
             >
               <X
                 size={20}
-                className="text-emerald-400 group-hover:text-emerald-300 transition-colors"
+                className="text-white group-hover:text-emerald-300 transition-colors"
               />
             </button>
           </div>
@@ -113,17 +110,17 @@ function Navbar() {
           {/* Bottom accent section */}
           <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-emerald-900/20 to-transparent border-t border-emerald-500/10">
             <div className="text-center">
-              <p className="text-xs text-emerald-300/40 font-medium">
-                Zainab Asif
+              <p className="text-xs text-white font-medium">Zainab Asif</p>
+              <p className="text-xs text-emerald-300/75 mt-1">
+                Software Engineer
               </p>
-              <p className="text-xs text-emerald-200/30">Software Engineer</p>
             </div>
             {/* Decorative dots */}
-            <div className="flex justify-center space-x-1 mt-3">
+            <div className="flex justify-center space-x-1 mt-2">
               {[...Array(3)].map((_, i) => (
                 <div
                   key={i}
-                  className="w-1.5 h-1.5 rounded-full bg-emerald-400/30"
+                  className="w-1.5 h-1.5 rounded-full bg-emerald-400/50"
                 />
               ))}
             </div>
