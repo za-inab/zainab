@@ -14,7 +14,7 @@ export interface Project {
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   return (
-    <div className="rounded-lg border-2 border-emerald-900 bg-black group h-[410px] max-h-[500px] min-w-[283px] w-[355px] xl:w-[283px] shadow-2xl shadow-emerald-400/15 hover:border-[1.5px] hover:shadow-xl hover:border-emerald-400 hover:shadow-emerald-500/20 transition-all duration-500 p-4">
+    <div className="rounded-lg border-2 border-emerald-900 bg-black group h-[410px] max-h-[500px] min-w-[283px] w-[355px] xl:w-[283px] shadow-2xl shadow-emerald-400/15 hover:border-[1.5px] hover:shadow-xl hover:border-emerald-400 hover:shadow-emerald-500/20 transition-all duration-500 p-4 text-start">
       <div className="relative w-full h-[45%] mb-3">
         <Image
           src={project.photo}
@@ -37,7 +37,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
         </p>
       </div>
 
-      <div className="h-[15%] content-center">
+      <div className="h-[15%] content-center pb-2">
         <Link
           href={project.liveLink}
           target="_blank"
