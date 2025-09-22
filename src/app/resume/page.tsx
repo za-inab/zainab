@@ -9,8 +9,8 @@ import timelineData from "@/data/timelineData.json";
 const ResumePage: React.FC = () => {
   return (
     <div className="flex flex-col h-full w-full justify-center items-center">
-      <div className="min-h-screen bg-black relative w-[80%]">
-        {/* Main Container with proper spacing for navbar/footer */}
+      <div className="min-h-screen bg-black relative w-[90%]">
+        {/* The heading div */}
         <div className="text-center mb-12 mt-2">
           <p className="text-gray-400 mb-2 text-sm md:text-[16px] lg:text-lg">
             Checkout my resume
@@ -21,7 +21,9 @@ const ResumePage: React.FC = () => {
             <span className="absolute left-0 bottom-[-8px] w-full h-[3px] bg-emerald-500 animate-pulse rounded-full"></span>
           </h2>
         </div>
-        <div className="pb-16 px-4 md:px-8 relative z-10">
+
+        {/* Main Container with proper spacing for navbar/footer */}
+        <div className="pb-16 px-4 md:px-8 relative">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 gap-y-14 lg:gap-12 items-center lg:items-start justify-center min-h-[calc(100vh-144px)]">
             {/* Profile Card - Side positioned on desktop, top on mobile */}
             <div className="lg:sticky lg:top-24 flex-shrink-0 justify-items-center">
@@ -29,7 +31,7 @@ const ResumePage: React.FC = () => {
             </div>
 
             {/* Main Content - Scrollable timeline and skills */}
-            <div className="flex-1 max-w-5xl justify-center items-center justify-items-center lg:justify-items-start">
+            <div className="flex-1 max-w-7xl justify-center items-center justify-items-center lg:justify-items-start">
               {/* Timeline Section */}
               <div className="mb-20">
                 <div className="mb-8 lg:mb-12 text-center sm:text-left">
