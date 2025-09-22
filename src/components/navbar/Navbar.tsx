@@ -62,10 +62,10 @@ function Navbar() {
         {/* Mobile Sidebar */}
         <div
           className={cn(
-            "fixed top-0 right-0 h-screen w-80 transform transition-all duration-500 ease-out z-200",
+            "fixed top-0 right-0 min-h-screen w-80 transform transition-all duration-500 ease-out z-200",
             "bg-gradient-to-br from-gray-900/95 via-black/90 to-gray-950/95",
             "backdrop-blur-xl border-l border-emerald-500/20 shadow-2xl shadow-emerald-900/20",
-            isOpen ? "translate-x-0" : "translate-x-full"
+            isOpen ? "" : "hidden"
           )}
         >
           {/* Decorative top accent */}

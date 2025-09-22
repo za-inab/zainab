@@ -12,25 +12,38 @@ import profileData from "@/data/ProfileData.json";
 function Portfolio() {
   return (
     <div className="flex flex-col h-full w-full justify-center items-center">
-      <div className="pb-16 px-4 md:px-8 relative z-10">
+      <div className="min-h-screen bg-black relative w-[90%]">
+        {/* The heading div */}
         <div className="text-center mb-12 mt-2">
           <p className="text-gray-400 mb-2">Look at my work</p>
-          <h2 className="text-4xl font-bold relative inline-block">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 relative inline-block">
             My <span className="text-emerald-400">Portfolio</span>
-            {/* Animated underline */}
             <span className="absolute left-0 bottom-[-8px] w-full h-[3px] bg-emerald-500 animate-pulse rounded-full"></span>
           </h2>
         </div>
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 lg:gap-12 items-start justify-center min-h-[calc(100vh-144px)] ">
-          {/* Sidebar (IntroCard placeholder, you can swap with your real component) */}
-          <div className="w-full lg:w-80 lg:sticky lg:top-24 flex-shrink-0 justify-items-center">
-            <ProfileCard {...profileData} />
-          </div>
 
-          {/* Scrollable Content */}
-          <div className="flex-1 max-w-4xl justify-items-center">
-            <SpecializationComponent data={SpecData.Spec as Specialization[]} />
-            <ProjectComponent data={ProjectsData.Projects as Project[]} />
+        {/* Main Container with proper spacing for navbar/footer */}
+        <div className="pb-16 px-6 md:px-8 relative">
+          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 gap-y-14 lg:gap-12 items-center lg:items-start justify-center min-h-[calc(100vh-144px)]">
+            {/* Profile Card - Side positioned on desktop, top on mobile */}
+            <div className="lg:sticky lg:top-24 flex-shrink-0 justify-items-center">
+              <ProfileCard {...profileData} />
+            </div>
+
+            {/* Main Content - Scrollable timeline and skills */}
+            <div className="flex-1 max-w-7xl justify-center items-center justify-items-center lg:justify-items-start w-full">
+              {/* Timeline Section */}
+              <div className="mb-20 w-full">
+                <SpecializationComponent
+                  data={SpecData.Spec as Specialization[]}
+                />
+              </div>
+
+              {/* Skills Section */}
+              <div className="text-center sm:text-left w-full">
+                <ProjectComponent data={ProjectsData.Projects as Project[]} />
+              </div>
+            </div>
           </div>
         </div>
       </div>

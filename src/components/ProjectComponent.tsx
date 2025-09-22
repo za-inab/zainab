@@ -14,8 +14,8 @@ export interface Project {
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   return (
-    <div className="rounded-lg border-2 border-emerald-900 bg-black group hover:shadow-xl p-2.5 h-[410px] max-h-[410px] min-w-[283px] w-[355px] xl:w-[284px] hover:border-[1.5px] hover:border-emerald-400 shadow-2xl shadow-emerald-400/15 hover:shadow-emerald-500/20 transition-all duration-500">
-      <div className="relative w-full h-48 p-2">
+    <div className="rounded-lg border-2 border-emerald-900 bg-black group h-[410px] max-h-[500px] min-w-[283px] w-[355px] xl:w-[283px] shadow-2xl shadow-emerald-400/15 hover:border-[1.5px] hover:shadow-xl hover:border-emerald-400 hover:shadow-emerald-500/20 transition-all duration-500 p-4 text-start">
+      <div className="relative w-full h-[45%] mb-3">
         <Image
           src={project.photo}
           alt={project.name}
@@ -24,38 +24,38 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
           className="object-cover w-full h-full rounded-lg transform  hover:scale-110 hover:-rotate-20 transition-transform duration-700"
         />
       </div>
-      <div className="p-3">
-        <div className="h-[40%]">
-          <div className="flex flex-row gap-1">
-            <h3 className="text-lg whitespace-nowrap font-semibold text-white">
-              {project.name}
-            </h3>
-            <div className="mx-1 h-0.5 bg-emerald-400 w-full self-center items-center justify-center"></div>
-          </div>
-          <p className="text-gray-400 text-sm mt-2 text-ellipsis">
-            {project.description}
-          </p>
+
+      <div className="h-[40%]">
+        <div className="flex flex-row gap-1">
+          <h3 className="text-lg whitespace-nowrap font-semibold text-white mt-2">
+            {project.name}
+          </h3>
+          <div className="mx-1 h-0.5 bg-emerald-400 w-full self-center items-center justify-center"></div>
         </div>
-        <div className="">
-          <Link
-            href={project.liveLink}
-            target="_blank"
-            className="inline-block mt-3 text-emerald-400 text-sm font-medium hover:underline"
-          >
-            View Project →
-          </Link>
-        </div>
+        <p className="text-gray-400 text-sm mt-3 text-ellipsis">
+          {project.description}
+        </p>
+      </div>
+
+      <div className="h-[15%] content-center pb-2">
+        <Link
+          href={project.liveLink}
+          target="_blank"
+          className="inline-block mt-3 text-emerald-400 text-sm font-medium hover:underline"
+        >
+          View Project →
+        </Link>
       </div>
     </div>
   );
 };
 
 const ProjectComponent: React.FC<{ data: Project[] }> = ({ data }) => (
-  <div className="w-[100%] justify-items-center md:justify-items-start">
+  <div className="w-[100%] justify-items-center lg:justify-items-start">
     <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold text-white mb-6">
       My <span className="text-emerald-400">Projects</span>
     </h2>
-    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 justify-items-center">
+    <div className="grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-6 justify-items-center p-4">
       {data.map((p, i) => (
         <ProjectCard key={i} project={p} />
       ))}
