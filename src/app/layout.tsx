@@ -29,11 +29,11 @@ import Footer from "@/components/Footer";
     openGraph: {
       title: "Zainab Asif | Full Stack Developer",
       description: "Portfolio and projects of Zainab Asif",
-      url: "https://yourdomain.com",
+      url: "https://zainabasif.vercel.app",
       siteName: "Zainab Asif",
       images: [
         {
-          url: "/preview.png",
+          url: "/website.png",
           width: 1200,
           height: 630,
           alt: "Preview of Zainab's Portfolio",
