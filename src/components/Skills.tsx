@@ -37,9 +37,9 @@ function SkillCard({ skill }: { skill: Skill }) {
           <Image
             src={skill.icon}
             alt={skill.name}
-            width={50}
-            height={50}
-            className="w-10 h-10 object-contain"
+            width={60}
+            height={60}
+            className="aspect-square object-contain"
           />
         ) : (
           <span className="text-3xl">{skill.icon}</span>
