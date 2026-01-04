@@ -91,22 +91,23 @@ function AboutPage() {
                   href="mailto:youremail@example.com"
                   className="text-emerald-400 hover:underline"
                 >
-                  zainabasif.work@gmail.com
+                  zasif.work@gmail.com
                 </a>
               </p>
               <p>
                 <span className="font-semibold text-white">Age:</span> 23
               </p>
               <p>
-                <span className="font-semibold text-white">From:</span> Pakistan
+                <span className="font-semibold text-white">Location:</span>{" "}
+                Germany
               </p>
             </div>
 
             {/* Buttons & Socials */}
             <div className="flex flex-col sm:flex-row sm:items-center gap-6">
               <a
-                href="/Zainab-Asif_Resume_SoftwareEngineer_React_JS.pdf"
-                download="Zainab_Asif_CV_JS_Full_Stack_SE.pdf"
+                href="/Zainab_Asif_Software_Engineer_JavaScript.pdf"
+                download="Zainab_Asif_Software_Engineer_JavaScript.pdf"
                 className="px-6 py-3 bg-emerald-500 text-black rounded-full font-medium hover:bg-black hover:border-2 hover:border-emerald-500 hover:text-emerald-500 transition text-center"
               >
                 Download CV
